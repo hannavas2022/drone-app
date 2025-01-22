@@ -4,17 +4,17 @@ export const data = [
     {
         id: uuidv4(),
         question: "Do I need to have certification or a license to fly a drone during the course?",
-        answer: "No, you don’t need a certification or license to participate in the course. Our Level 1 FPV Drone Course is designed for beginners and includes both theoretical and practical training in a safe and controlled environment. During the course we would be using drones with the weight less than 250g and you don’t need any license or certification for that. However, if you wish to fly drones recreationally or commercially outside the course, you may need to follow Canada’s drone regulations, such as obtaining an RPAS certification in Canada."
+        answer: "No, you don't need a certification or license to participate in the course. Our Level 1 FPV Drone Course is designed for beginners and includes both theoretical and practical training in a safe and controlled environment. During the course we would be using drones with the weight less than 250g and you don't need any license or certification for that. However, if you wish to fly drones recreationally or commercially outside the course, you may need to follow Canada's drone regulations, such as obtaining an RPAS certification in Canada."
     },
     {
         id: uuidv4(),
         question: "Do I need to bring my own equipment?",
-        answer: "No, all necessary equipment, including drones, controllers, FPV goggles, and simulators, will be provided during the course. If you already have your own controller or whoop FPV drone - you’re welcome to bring it, but it’s not required."
+        answer: "No, all necessary equipment, including drones, controllers, FPV goggles, and simulators, will be provided during the course. If you already have your own controller or whoop FPV drone - you're welcome to bring it, but it's not required."
     },
     {
         id: uuidv4(),
         question: "Who is this course suitable for?",
-        answer: "Our course is designed for anyone interested in learning how to fly FPV drones, including complete beginners. Whether you’re a hobbyist, aspiring drone pilot or a professional looking to explore FPV flying, our course offers tailored instruction for all skill levels."
+        answer: "Our course is designed for anyone interested in learning how to fly FPV drones, including complete beginners. Whether you're a hobbyist, aspiring drone pilot or a professional looking to explore FPV flying, our course offers tailored instruction for all skill levels."
     },
     {
         id: uuidv4(),
@@ -44,12 +44,12 @@ export const data = [
     {
         id: uuidv4(),
         question: "What happens if I miss a class?",
-        answer: "If you miss a class, let us know in advance, and we’ll do our best to provide access to additional resources."
+        answer: "If you miss a class, let us know in advance, and we'll do our best to provide access to additional resources."
     },
     {
         id: uuidv4(),
         question: "What should I do if I experience technical issues with my FPV drone?",
-        answer: "If you experience technical issues with your FPV drone during or after the course, don’t worry—our technical support team is here to help! Contact us via email or phone, and we’ll assist you with troubleshooting, repairs or advice on maintaining your equipment. Additionally, our course includes tips on resolving common technical problems, so you’ll feel confident managing minor issues on your own."
+        answer: "If you experience technical issues with your FPV drone during or after the course, don't worry - our technical support team is here to help! Contact us via email or phone, and we'll assist you with troubleshooting, repairs or advice on maintaining your equipment. Additionally, our course includes tips on resolving common technical problems, so you'll feel confident managing minor issues on your own."
     }
 ]
 

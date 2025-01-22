@@ -1,4 +1,4 @@
-import logo from '../pages/logo/kooma.png';
+﻿import logo from '../pages/logo/kooma.png';
 import facebook from '../pages/media/facebook.png';
 import instagram from '../pages/media/instagram.png';
 import youtube from '../pages/media/youtube.png';
@@ -6,6 +6,7 @@ import email from '../pages/media/email.png';
 import whatsapp from '../pages/media/whatsapp.png';
 import threads from '../pages/media/threads.png';
 import tiktok from '../pages/media/tiktok.png';
+
 export default function Footer() {
     return (
         <footer className="footer">
@@ -13,7 +14,7 @@ export default function Footer() {
                 <img src={logo} alt="logo" className="footer-logo-img" />
                 <div className="footer-copyright">
                     <p className="academy-name">KOOMA Pilot Drone Academy</p>
-                    <p className="copyright">� 2025 KOOMA</p>
+                    <p className="copyright">© 2025 KOOMA</p>
                 </div>
             </div>
             <div className="footer-content">

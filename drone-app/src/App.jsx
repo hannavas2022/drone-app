@@ -1,7 +1,6 @@
 
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
-import About from './pages/About';
 import Courses from './pages/Courses';
 import FAQ from './pages/FAQ';
 import TechSupport from './pages/TechSupport';
@@ -17,12 +16,13 @@ function App() {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/home" element={<Home />} />
-                    <Route path="/about" element={<About />} />
+                    
                     <Route path="/courses" element={<Courses />} />
                     <Route path="/faq" element={<FAQ />} />
                     <Route path="/techsupport" element={<TechSupport />} />
                 </Routes>
             </div>
+            <div className="my-12"></div>
             <Footer /> 
         </>
     );

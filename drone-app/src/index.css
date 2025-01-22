@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 * {
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
@@ -21,7 +20,7 @@ body {
     font-size: 22px;
     align-items: stretch;
     gap: 2rem;
-    padding 0 2 rem;
+    padding: 0.2rem;
     
 }
 .nav img {
@@ -55,46 +54,39 @@ body {
         background-color: #0962ea;
         cursor: pointer;
     }
-/* Hamburger menu styles */
+
 .hamburger {
     display: none;
     cursor: pointer;
     flex-direction: column;
     gap: 5px;
     position: absolute;
-    right: 20px; /* Position hamburger on the right */
-    top: 11%; /* Vertically center it */
-    transform: translateY(-50%); /* Center vertically */
-    height: 80px; /* Set height to match logo height */
+    right: 20px; 
+    top: 11%; 
+    transform: translateY(-50%); 
+    height: 80px; 
 }
 
     .hamburger .bar {
         width: 30px;
         height: 4px;
         background-color: white;
-        transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+        transition: background-color 0.3s ease; 
     }
 
-    /* Hamburger hover effect */
+    
     .hamburger:hover .bar {
-        background-color: #ffe35e; /* Change bar color on hover */
+        background-color: #ffe35e; 
     }
 .main-container {
     display: flex;
     flex-direction: column;
     min-height: 100vh; /* Ensure full screen height */
-    padding-bottom: 50px; /* Make space for the footer */
+    
 }
 
 .container {
     flex-grow: 1; /* Take all available space between navbar and footer */
-}
-.title h1 {
-    all: unset;
-    font-size: 80px;
-    display: block;
-    text-align: center;
-    margin: 1rem;
 }
 .slider-image {
     object-fit: cover;
@@ -104,9 +96,10 @@ body {
     border-radius: 20px;
     flex-shrink: 0;
     flex-grow: 0;
+    max-height:500px;
     }
 
-.img-slider-btn{
+.img-slider-btn {
     all: unset;
     display: block;
     position: absolute;
@@ -114,7 +107,7 @@ body {
     margin: 0;
     padding: 1rem;
     cursor: pointer;
-    transition: background-color 100ms easy-in-out;
+    transition: background-color 100ms ease-in-out;
 }
     .img-slider-btn:hover, .img-slider-btn:focus-visible{
         background-color: rgb(0,0,0,0.2);
@@ -134,11 +127,11 @@ body {
     cursor: pointer;
     width: 1rem;
     height: 1rem;
-    transition: scale 100ms ease-in-out;
+    transition: transform 100ms ease-in-out;
 }
     .img-slider-dot-btn:hover,
     .img-slider-dot-btn:focus-visible {
-        scale: 1.3;
+        transform: scale(1.3);
     }
     .img-slider-dot-btn > * {
         stroke: #faf15d;
@@ -147,29 +140,7 @@ body {
         width: 100%;
     }
 
-.course-logo {
-    width: 60px;
-    display: block;
-    margin: auto;
-}
 
-.course-column {
-    background-color: white;
-}
-
-.coming-button button {
-    background-color: #ccc;
-    cursor: not-allowed;
-    padding: 10px 20px;
-    font-size: 16px;
-    color: black;
-    border: none;
-    border-radius: 5px;
-    text-align: center;
-    display: block;
-    margin: auto;
-    margin-bottom: 10px;
-}
 
 .skip-link {
     position: absolute;
@@ -208,54 +179,12 @@ body {
         pointer-events: auto; /* Re-enable interaction */
     }
 
-.about-us-container {
-    max-width: 1200px;
-    width: 100%;
-    margin: 0 auto; /* Centering the container */
-    padding: 20px; /* Add padding for spacing */
-    background-color: #93deff; /* Example background color */
-    color: black;
-   
-    border-radius: 20px;
-}
-    .about-us-container .mission-header,
-    .about-us-container .story-header,
-    .about-us-container .why-choose-us-header,
-    .about-us-container .our-community-header {
-        text-align: center;
-        font-size: 22px;
-        letter-spacing: 2px;
-    }
-    .about-us-container .mission-content,
-    .about-us-container .story-content,
-    .about-us-container .why-choose-us-content,
-    .about-us-container .our-community-content {
-        text-align: center;
-        font-size: 18px;
-        
-    }
-.why-choose-us-content ul {
-    list-style-type: disc; /* Default bullet */
-    padding-left: 0; /* Remove default padding */
-    display: flex; /* Use flexbox for alignment */
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center align the list items and bullets */
-    justify-content: center; /* Vertically center the items */
-}
-.why-choose-us-content li {
-    text-align: center; /* Center the text of list items */
-    list-style-position: inside; /* Ensure bullets stay inside the list */
-    margin-bottom: 10px; /* Space between list items */
-}
 .courses-container {
     display: flex;
     flex-direction: column;
     gap: 2rem;
     margin: auto 10px;
-}
-
-.courses-header h1 {
-    text-align: center;
+    margin-top: 20px;
 }
 
 .course-row {
@@ -263,31 +192,46 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 1rem;
+    margin-top: -2px;
 }
 
 .course-column {
     flex: 1;
-    min-width: 250px; /* Ensures columns stack properly on smaller screens */
+    min-width: 250px; 
     padding: 1rem;
     border: 1px solid #0aa0f6;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+.course-logo {
+    width: 60px;
+    display: block;
+    margin: auto;
 }
 
-.course-image {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
+.coming-button button {
+    background-color: #ccc;
+    cursor: not-allowed;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    display: block;
+    margin: 10px auto;
+    margin-bottom: 10px;
 }
 
 .register-button button {
+    background-color: #0aa0f6;
+    cursor: pointer;
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #0aa0f6;
     color: white;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
     text-align: center;
     display: block;
     margin: 10px auto;
@@ -309,31 +253,20 @@ body {
 
 .footer {
     position: relative;
-    background-color: #0aa0f6; /* Background color */
-    padding: 20px 0;
+    background-color: #0aa0f6; 
+  height: 150px;
     width: 100%;
     color: white;
-    display: flex; /* Flex layout for logo and content */
-    justify-content: space-between; /* Push logo to the left, content to the right */
-    align-items: center; /* Vertically align items */
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    
 }
-
-.footer {
-    position: relative;
-    background-color: #0aa0f6; /* Background color */
-    padding: 1px 0;
-    width: 100%;
-    color: white;
-    display: flex;
-    justify-content: space-between; /* Distribute space between logo section and social links */
-    align-items: flex-start; /* Align items to the top */
-}
-
 .footer-logo {
     display: flex;
-    flex-direction: column; /* Stack logo and footer text vertically */
-    align-items: flex-start; /* Align items to the left */
-    margin-left: 20px; /* Space for logo */
+    flex-direction: column; 
+    align-items: flex-start; 
+    margin-left: 20px; 
 }
 
 .footer-logo-img {
@@ -343,11 +276,9 @@ body {
 }
 
 .footer-copyright {
-    text-align: left; /* Align the text to the left */
+    text-align: left; 
     font-size: 14px;
-    margin-top: -1.5rem;
-    
-}
+    }
 
 .academy-name {
     font-size: 18px;
@@ -356,25 +287,24 @@ body {
 
 .copyright {
     font-size: 14px;
-   margin-top: -0.5rem;
 }
 
 .footer-content {
     display: flex;
     flex-direction: column;
-    align-items: flex-end; /* Align content to the right */
-    text-align: right; /* Align text to the right */
-    margin-right: 20px; /* Space from the edge */
-    font-size: 14px;
+    align-items: flex-end; 
+    text-align: right; 
+    margin-right: 20px; 
+    font-size: 17px;
     font-weight: bold;
-    margin-top: 50px;
+   
 }
 
 .social-links {
     display: flex;
     gap: 15px;
-    justify-content: flex-end; /* Align social links to the right */
-    object-fit: contain;
+    justify-content: flex-end; 
+    padding: 5px;
 }
 
    
@@ -382,43 +312,40 @@ body {
 
 @keyframes squish {
     50% {
-            scale: 1.6 0.6;
-        }
+        transform: scale(1.6, 0.6);
+    }
     }
 
 /* Mobile responsiveness */
 @media screen and (max-width: 768px) {
     .nav {
         flex-direction: column;
-        align-items: flex-start; /* Align items to the left on mobile */
+        align-items: flex-start; 
     }
 
         .nav ul {
-            display: none; /* Hide links by default */
+            display: none; 
             flex-direction: column;
             gap: 1rem;
             width: auto;
             margin-right: 0;
             max-width: 100%;
             padding: 1rem;
-            background-color: #0aa0f6; /* Add background color to the mobile menu */
+            background-color: #0aa0f6; 
             position: absolute;
             right: 0;
-            top: 80px; /* Adjust the distance from the top */
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Add subtle shadow for dropdown effect */
+            top: 80px; 
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
         }
 
     .nav-links.active {
-        display: flex; /* Show links when menu is active */
+        display: flex; 
     }
 
     .hamburger {
-        display: flex; /* Show hamburger icon */
+        display: flex; 
     }
-    .about-us-container {
-        padding: 15px; /* Adjust padding for mobile */
-    }
-   
+       
     .footer-logo {
         display: none;
     }
@@ -426,15 +353,17 @@ body {
     .footer-content {
         display: block;
         margin: 10px auto;
-        font-size: 14px;
+        font-size: 16px;
         text-align: center;
     }
 
     .footer .social-links {
-        gap: 10px; /* Reduce the gap between social icons */
-        justify-content: center; /* Center the social links horizontally */
-        
+        gap: 10px;
+        justify-content: center; 
+        padding:5px;
     }
-
+    .img-slider-btn {
+        display: none;
+    }
           
         }

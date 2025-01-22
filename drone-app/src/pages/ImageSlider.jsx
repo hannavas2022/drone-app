@@ -1,4 +1,4 @@
-import { useState } from 'react';
+﻿import { useState } from 'react';
 import { ArrowBigLeft, ArrowBigRight } from 'lucide-react';
 import PropTypes from 'prop-types';
 import { CircleDot, Circle } from 'lucide-react';

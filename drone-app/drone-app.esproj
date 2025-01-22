@@ -11,4 +11,9 @@
   <ItemGroup>
     <Folder Include="src\assets\" />
   </ItemGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties package_1json__JsonSchema="https://json.schemastore.org/package.manifest.json" />
+    </VisualStudio>
+  </ProjectExtensions>
 </Project>

@@ -1,11 +1,13 @@
-import {useState} from 'react'
+﻿import {useState} from 'react'
 import SQ from '../components/FAQ_SQ.jsx'
-import {data} from '../components/FAQ_data.jsx'
+import { data } from '../components/FAQ_data.jsx'
+
 export default function FAQ() {
-    const [questions, setQuestions] = useState(data);
-    
+
+    const [questions] = useState(data);
+
     return (
-        <div><h1>FAQ</h1>
-            {questions.map((question) => (<SQ question={question.question} answer={question.answer} />))}
-        </div>);
+        <div className="p-4" ><h2 className="mb-6 text-center text-3xl font-bold">FAQ</h2>
+            {questions.map((question) => (<SQ key={question.id} {...question} />))}
+     </div>);
 }
