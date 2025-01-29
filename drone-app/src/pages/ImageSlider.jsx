@@ -1,24 +1,42 @@
-﻿import { useState } from 'react';
+﻿import { useState, useEffect } from 'react';
 import { ArrowBigLeft, ArrowBigRight } from 'lucide-react';
 import PropTypes from 'prop-types';
 import { CircleDot, Circle } from 'lucide-react';
 
 export function ImageSlider({ images }) {
     const [imageIndex, setImageIndex] = useState(0);
+    const [isPaused, setIsPaused] = useState(false);
+
+    // Auto-slide effect
+    useEffect(() => {
+        if (isPaused) return; // Pause if user interacts
+
+        const interval = setInterval(() => {
+            setImageIndex(index => (index + 1) % images.length);
+        }, 3000); // Change every 3 seconds
+
+        return () => clearInterval(interval); // Cleanup on unmount
+    }, [isPaused, images.length]);
+
 
     function prevImage() {
-        setImageIndex(index => {
-            if (index === 0) return images.length - 1
-            return index -1
-        })
+        setIsPaused(true);
+        setImageIndex(index => (index === 0 ? images.length - 1 : index - 1));
+        resetAutoSlide();
+        
     }
 
-    function nextImage() {
-        setImageIndex(index => {
-            if (index === images.length - 1) return 0;
-            return index + 1;
-        });
+function nextImage() {
+    setIsPaused(true);
+    setImageIndex(index => (index + 1) % images.length);
+    resetAutoSlide();
+        
     }
+
+// Reset auto-slide after manual interaction
+const resetAutoSlide = () => {
+    setTimeout(() => setIsPaused(false), 5000); // Resume after 5s
+};
 
       return (
           <section aria-label="Image Slider" style={{ width: "100%", height: "100%", position: "relative" }}>
@@ -34,7 +52,9 @@ export function ImageSlider({ images }) {
               <button onClick={nextImage} className="img-slider-btn" style={{ right: 0 }} aria-label="View Next Image"><ArrowBigRight aria-hidden /></button>
               <div style={{position: "absolute", bottom: ".5rem", left: "50%", translate: "-50%", display: "flex", gap: ".25rem"} }>
                   {images.map((_, index) => (
-                      <button key={index} className="img-slider-dot-btn" aria-label={'View Image ${index +1}'} onClick={()=> setImageIndex(index) }>{index === imageIndex ? <CircleDot aria-hidden/> : <Circle aria-hidden/>}</button>))}
+                      <button key={index}
+                          onClick={() => { setIsPaused(true); setImageIndex(index); resetAutoSlide(); }}
+ className="img-slider-dot-btn" aria-label={'View Image ${index +1}'} >{index === imageIndex ? <CircleDot aria-hidden/> : <Circle aria-hidden/>}</button>))}
               </div>
               <div id="after-image-slider-controls"/>
         </section>
