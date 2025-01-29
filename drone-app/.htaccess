@@ -1,4 +1,11 @@
-<IfModule mod_mime.c>
-AddType application/javascript .js .jsx .mjs
-AddType text/css .css
+
+RewriteEngine On
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.html [L]
+
+<IfModule mod_mime.c="">
+	AddType application/javascript .js .jsx .mjs
+	AddType text/css .css
 </IfModule>

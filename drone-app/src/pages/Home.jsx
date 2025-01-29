@@ -11,11 +11,11 @@ export default function Home() {
     return (
         <div className="min-h-screen">
             <div className="py-8 text-center">
-                <h1 className="text-black text-6xl font-bold">Kooma Pilot Drone Academy</h1>
+                <h1 className="text-6xl font-bold text-black">KOOMA Drone Academy</h1>
             </div>
             <div className="aspect-w-14 aspect-h-6 mx-auto max-w-screen-xl">
                 <ImageSlider images={IMAGES} />
-                <a href="#about" className="hidden text-4xl opacity-0 transition-opacity duration-300 focus-visible:opacity-100 focus-visible:pointer-events-auto">About us</a>
+                <a href="#about" className="opacity-0 hidden text-4xl transition-opacity duration-300 focus-visible:opacity-100 focus-visible:pointer-events-auto">About us</a>
             </div>
             <div className="my-12"></div>
                 <About />
