@@ -13,7 +13,7 @@ body {
     
 }
 .nav {
-    background-color: #0aa0f6;
+    background-color: #0057b7;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -21,7 +21,6 @@ body {
     align-items: stretch;
     gap: 2rem;
     padding: 0.2rem;
-    
 }
 .nav img {
     height: 80px;
@@ -114,13 +113,13 @@ body {
     }
     .img-slider-dot-btn:focus-visible, img-slider-dot-btn:focus-visible {
         outline: auto;
-    } 
-    .img-slider-btn > * {
-        stroke: #faf15d;
-        fill: #0962ea;
-        height: 2rem;
-        width: 2rem;
     }
+.img-slider-btn > * {
+    stroke: #faf15d;
+    fill: #0057b7;
+    height: 2rem;
+    width: 2rem;
+}
 .img-slider-dot-btn {
     all: unset;
     display: block;
@@ -135,7 +134,7 @@ body {
     }
     .img-slider-dot-btn > * {
         stroke: #faf15d;
-        fill: #0962ea;
+        fill: #0057b7;
         height: 100%;
         width: 100%;
     }

@@ -6,7 +6,7 @@ export default function Courses() {
                 <h2 className="mb-2 text-center text-3xl font-bold">Our Courses</h2>
             </div>
 
-            {/* Row 1 - Course 1 & Course 2 */}
+            {/* Row 1 - Course 1 - Course 4 */}
             <div className="course-row">
                 {/* Course 1 */}
                 <div className="course-column">
@@ -25,15 +25,42 @@ export default function Courses() {
                         <p></p>
                         <p className="mt-4"><strong>LEVEL: </strong>Beginner</p>
                         <p className="mt-4"><strong>Duration: </strong>6 lessons (9 hours in total)</p>
+                        <p className="mt-4"><strong>Dates: </strong>February 10 – March 3, 2025</p>
                         <div className="register-button">
-                            <a href="https://retlife.ca/product/new-introduction-to-fpv-first-person-view-drone-technology-level-1-youth-ages-12-16-mondays-and-thursdays-february-10-march-3-2025-no-class-on-february-17-ecole-sun-valley-school/" target="_blank" rel="noopener noreferrer">
-                                <button>Register Now</button>
+                            <a href="/" target="_blank" rel="noopener noreferrer">
+                                <button>Sold Out</button>
                             </a>
                         </div>
                     </div>
                 </div>
 
                 {/* Course 2 */}
+                <div className="course-column">
+                    <img src={logo} alt="logo" className="course-logo" />
+                    <h2 className="text-center text-2xl font-bold tracking-wider">FPV Drone Pilot Level 1 (Youth)</h2>
+                    <div className="text-md mt-4">
+                        <p>This exciting FPV Drone course is perfect for youth who are eager to experience the thrill of flight and explore the world from above!</p>
+                        <p className="mt-4"><strong>Included in this package:</strong></p>
+                        <ul className="list-disc pl-6">
+                            <li>Theoretical part</li>
+                            <li>Basic skills in drone flight simulator</li>
+                            <li>Basic practical skills on drones indoor</li>
+                            <li>Safety protocols</li>
+                            <li>All equipment is provided: goggles, controller, drone, laptop, simulator</li>
+                        </ul>
+                        <p></p>
+                        <p className="mt-4"><strong>LEVEL: </strong>Beginner</p>
+                        <p className="mt-4"><strong>Duration: </strong>6 lessons (9 hours in total)</p>
+                        <p className="mt-4"><strong>Dates: </strong>April 7 – May 12, 2025</p>
+                        <div className="coming-button">
+                            <a href="/" target="_blank" rel="noopener noreferrer">
+                                <button disabled>Spring 2025</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Course 3 */}
                 <div className="course-column">
                     <img src={logo} alt="logo" className="course-logo" />
                     <h2 className="text-center text-2xl font-bold tracking-wider">FPV Drone Pilot Level 1 (Adults)</h2>
@@ -50,6 +77,8 @@ export default function Courses() {
                         <p></p>
                         <p className="mt-4"><strong>LEVEL: </strong>Beginner</p>
                         <p className="mt-4"><strong>Duration: </strong>6 lessons (9 hours in total)</p>
+                        <p className="mt-4"><strong>Dates: </strong>April 10 – May 15, 2025</p>
+                       
                         <div className="coming-button">
                             <a href="/" target="_blank" rel="noopener noreferrer">
                                 <button disabled>Spring 2025</button>
@@ -58,7 +87,88 @@ export default function Courses() {
                     </div>
                 </div>
 
-                {/* Course 3 */}
+                {/* Course 4 */}
+                <div className="course-column">
+                    <img src={logo} alt="logo" className="course-logo" />
+                    <h2 className="text-center text-2xl font-bold tracking-wider">FPV Drone Pilot Level 1 (Youth)</h2>
+                    <div className="text-md mt-4">
+                        <p>This exciting FPV Drone course is perfect for youth who are eager to experience the thrill of flight and explore the world from above!</p>
+                        <p className="mt-4"><strong>Included in this package:</strong></p>
+                        <ul className="list-disc pl-6">
+                            <li>Theoretical part</li>
+                            <li>Basic skills in drone flight simulator</li>
+                            <li>Basic practical skills on drones indoor</li>
+                            <li>Safety protocols</li>
+                            <li>All equipment is provided: goggles, controller, drone, laptop, simulator</li>
+                        </ul>
+                        <p></p>
+                        <p className="mt-4"><strong>LEVEL: </strong>Beginner</p>
+                        <p className="mt-4"><strong>Duration: </strong>4 lessons (8 hours in total)</p>
+                        <p className="mt-4"><strong>Dates: </strong>May 26 – June 23, 2025</p>
+                                            <div className="coming-button">
+                            <a href="/" target="_blank" rel="noopener noreferrer">
+                                <button disabled>Summer 2025</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* Row 2 - Course 5 - Course 8 */}
+            <div className="course-row">
+                {/* Course 5 */}
+                <div className="course-column">
+                    <img src={logo} alt="logo" className="course-logo" />
+                    <h2 className="text-center text-2xl font-bold tracking-wider">FPV Drone Pilot Level 1 (Adults)</h2>
+                    <div className="text-md mt-4">
+                        <p>This exciting FPV Drone course is perfect for adults who are eager to experience the thrill of flight and explore the world from above!</p>
+                        <p className="mt-4"><strong>Included in this package:</strong></p>
+                        <ul className="list-disc pl-6">
+                            <li>Theoretical part</li>
+                            <li>Basic skills in drone flight simulator</li>
+                            <li>Basic practical skills on drones indoor</li>
+                            <li>Safety protocols</li>
+                            <li>All equipment is provided: goggles, controller, drone, laptop, simulator</li>
+                        </ul>
+                        <p></p>
+                        <p className="mt-4"><strong>LEVEL: </strong>Beginner</p>
+                        <p className="mt-4"><strong>Duration: </strong>6 lessons (9 hours in total)</p>
+                        <p className="mt-4"><strong>Dates: </strong>May 22 – July 5, 2025</p>
+                        <div className="coming-button">
+                            <a href="/" target="_blank" rel="noopener noreferrer">
+                                <button disabled>Summer 2025</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Course 6 */}
+                <div className="course-column">
+                    <img src={logo} alt="logo" className="course-logo" />
+                    <h2 className="text-center text-2xl font-bold tracking-wider">FPV Drone Pilot Summer Camp</h2>
+                    <div className="text-md mt-4">
+                        <p>This exciting FPV Drone course is perfect for adults who are eager to experience the thrill of flight and explore the world from above!</p>
+                        <p className="mt-4"><strong>Included in this package:</strong></p>
+                        <ul className="list-disc pl-6">
+                            <li>Theoretical part</li>
+                            <li>Basic skills in drone flight simulator</li>
+                            <li>Basic practical skills on drones indoor</li>
+                            <li>Safety protocols</li>
+                            <li>All equipment is provided: goggles, controller, drone, laptop, simulator</li>
+                        </ul>
+                        <p></p>
+                        <p className="mt-4"><strong>LEVEL: </strong>Beginner</p>
+                        <p className="mt-4"><strong>Duration: </strong>6 lessons (9 hours in total)</p>
+                        <p className="mt-4"><strong>Dates: </strong>will be announced</p>
+                        <div className="coming-button">
+                            <a href="/" target="_blank" rel="noopener noreferrer">
+                                <button disabled>Summer 2025</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Course 7 */}
                 <div className="course-column">
                     <img src={logo} alt="logo" className="course-logo" />
                     <h2 className="text-center text-2xl font-bold tracking-wider">Advanced FPV Drone Skills</h2>
@@ -75,16 +185,17 @@ export default function Courses() {
                         <p></p>
                         <p className="mt-4"><strong>LEVEL: </strong>Beginner with basic experience</p>
                         <p className="mt-4"><strong>Duration: </strong>6 lessons</p>
+                        <p className="mt-4"><strong>Dates: </strong>will be announced</p>
                         <p className="mt-10"></p>
                         <div className="coming-button">
                             <a href="/" target="_blank" rel="noopener noreferrer">
-                                <button disabled>Coming soon</button>
+                                <button disabled>Autumn 2025</button>
                             </a>
                         </div>
                     </div>
                 </div>
 
-                {/* Course 4 */}
+                {/* Course 8 */}
                 <div className="course-column">
                     <img src={logo} alt="logo" className="course-logo" />
                     <h2 className="text-center text-2xl font-bold tracking-wider">Drone Mastery</h2>
@@ -101,16 +212,16 @@ export default function Courses() {
                         <p></p>
                         <p className="mt-4"><strong>LEVEL: </strong>Intermediate with advanced skills</p>
                         <p className="mt-4"><strong>Duration: </strong>6 lessons</p>
+                        <p className="mt-4"><strong>Dates: </strong>will be announced</p>
                         <p className="mt-10"></p>
                         <div className="coming-button">
                             <a href="/" target="_blank" rel="noopener noreferrer">
-                                <button disabled>Coming soon</button>
+                                <button disabled>Autumn 2025</button>
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
-
             
         </div>
     );
