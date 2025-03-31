@@ -13,7 +13,7 @@ export default function Footer() {
             <div className="footer-logo">
                 <img src={logo} alt="logo" className="footer-logo-img" />
                 <div className="footer-copyright">
-                    <p className="academy-name">KOOMA Pilot Drone Academy</p>
+                    <p className="academy-name">KOOMA Drone Academy</p>
                     <p className="copyright">© 2025 KOOMA</p>
                 </div>
             </div>

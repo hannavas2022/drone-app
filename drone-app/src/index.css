@@ -21,6 +21,10 @@ body {
     align-items: stretch;
     gap: 2rem;
     padding: 0.2rem;
+    position: sticky; /* Makes the navbar sticky */
+    top: 0; /* Sticks the navbar to the top */
+    z-index: 1000; /* Ensures the navbar stays on top of other content */
+    width: 100%; /* Ensures the navbar takes up the full width */
 }
 .nav img {
     height: 80px;
@@ -60,10 +64,12 @@ body {
     flex-direction: column;
     gap: 5px;
     position: absolute;
-    right: 20px; 
-    top: 11%; 
-    transform: translateY(-50%); 
-    height: 80px; 
+    right: 20px;
+    top: 80%;
+    transform: translateY(-50%);
+    height: 80px;
+    
+  
 }
 
     .hamburger .bar {
@@ -224,7 +230,7 @@ body {
 }
 
 .register-button button {
-    background-color: #0aa0f6;
+    background-color: #0057b7;
     cursor: pointer;
     padding: 10px 20px;
     font-size: 16px;
@@ -252,14 +258,13 @@ body {
 
 .footer {
     position: relative;
-    background-color: #0aa0f6; 
-  height: 150px;
+    background-color: #0057b7;
+    height: 150px;
     width: 100%;
     color: white;
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
-    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .footer-logo {
     display: flex;
@@ -270,7 +275,7 @@ body {
 
 .footer-logo-img {
     width: 100px;
-    height: 80px;
+    height: 100%;
     display: block;
 }
 
@@ -342,7 +347,7 @@ body {
     }
 
     .hamburger {
-        display: flex; 
+        display: flex;
     }
        
     .footer-logo {
