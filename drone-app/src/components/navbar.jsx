@@ -9,14 +9,18 @@ export default function Navbar() {
         setIsOpen(!isOpen);
     };
 
+    const closeMenu = () => {
+        setIsOpen(false);
+    };
+
     return (
         <nav className="nav">
             <img src={logo} alt="logo" />
             <ul className={`nav-links ${isOpen ? 'active' : ''}`}>
-                <CustomLink to="/home">Home</CustomLink>
-                <CustomLink to="/courses">Courses</CustomLink>
-                <CustomLink to="/faq">FAQ</CustomLink>
-                <CustomLink to="/techsupport">Tech Support</CustomLink>
+                <CustomLink to="/home" onClick={closeMenu}>Home</CustomLink>
+                <CustomLink to="/courses" onClick={closeMenu}>Courses</CustomLink>
+                <CustomLink to="/faq" onClick={closeMenu}>FAQ</CustomLink>
+                <CustomLink to="/techsupport" onClick={closeMenu}>Tech Support</CustomLink>
             </ul>
             <div className="hamburger" onClick={toggleMenu}>
                 <div className="bar"></div>
