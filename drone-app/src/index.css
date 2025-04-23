@@ -292,6 +292,7 @@ body {
     .nav {
         flex-direction: column;
         align-items: flex-start; 
+        width:100%;
     }
     .navbar-logo{
         margin-right: 100px;
@@ -343,7 +344,14 @@ body {
     .hero-promo__right-block {
         transform: translateY(0); /* Reset translate if not needed on small screens */
     }
-        }
+    .about-section h2 {
+        font-size: 28px;
+    }
+    .about-section h3 {
+        font-size: 32px;
+    }
+    
+    }
 @media (min-width: 758px) and (max-width: 1100px) {
     .hero-text-small {
         font-size: 26px !important;

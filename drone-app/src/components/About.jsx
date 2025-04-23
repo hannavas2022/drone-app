@@ -5,27 +5,30 @@ export default function About() {
             <div className="relative z-20 mx-auto w-full max-w-6xl space-y-16">
 
                 {/* Our Mission */}
+                
                 <div
                     style={{ border: "1px solid #005BBB", borderRadius: "48px" }}
-                    className="p-6 text-center"
+                    className="about-section p-6 text-center"
                 >
                     <h2>Our Mission:</h2>
                     <h3>Empowering the Sky</h3>
 
-                    <div className="mt-6 flex items-center justify-between">
-                        {/* Left side: Paragraph with 10px indent */}
-                        <p className="w-1/2 pl-[48px] text-left text-[18px] text-black">
+                    <div className="mt-6 flex flex-col items-center justify-between md:flex-col lg:flex-row">
+                        {/* Text block */}
+                        <p className="pl-[10px] text-center text-[18px] text-black md:text-center md:w-full lg:text-left lg:w-1/2">
                             At KOOMA Drone Academy, we believe everyone has the potential to take flight—literally and figuratively. Whether you are a curious beginner, a thrill-seeking FPV racer, or someone dreaming of mastering drone technology, our mission is to make the sky your playground.
                         </p>
 
-                        {/* Right side: Image */}
+                        {/* Image visible from md+, stacked under text on md */}
                         <img
                             src={dron}
                             alt="Dron image"
-                            className="mb-[48px] mr-[48px] mt-[32px] h-[252px] w-[456px] rounded-[32px] object-cover"
+                            className="mb-[48px] mr-[48px] mt-[32px] hidden h-[252px] w-[456px] rounded-[32px] object-cover md:block"
                         />
                     </div>
                 </div>
+
+
 
                 {/* Our Story */}
                 <div style={{ border: "1px solid #005BBB", borderRadius: "48px" }} className="p-6 text-center">
