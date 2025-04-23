@@ -1,4 +1,4 @@
-﻿import logo from '../pages/logo/kooma.png';
+﻿import logo from '../assets/logo/kooma.png';
 export default function Courses() {
     return (
         <div className="courses-container">

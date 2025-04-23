@@ -1,11 +1,11 @@
-﻿import logo from '../pages/logo/kooma.png';
-import facebook from '../pages/media/facebook.png';
-import instagram from '../pages/media/instagram.png';
-import youtube from '../pages/media/youtube.png';
-import email from '../pages/media/email.png';
-import whatsapp from '../pages/media/whatsapp.png';
-import threads from '../pages/media/threads.png';
-import tiktok from '../pages/media/tiktok.png';
+﻿import logo from '../assets/logo/kooma.png';
+import facebook from '../assets/media/facebook.png';
+import instagram from '../assets/media/instagram.png';
+import youtube from '../assets/media/youtube.png';
+import email from '../assets/media/email.png';
+import whatsapp from '../assets/media/whatsapp.png';
+import threads from '../assets/media/threads.png';
+import tiktok from '../assets/media/tiktok.png';
 
 export default function Footer() {
     return (

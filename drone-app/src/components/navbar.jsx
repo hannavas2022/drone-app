@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link, useMatch, useResolvedPath } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import logo from '../pages/logo/kooma.png';
+import logo from '../assets/logo/kooma.png';
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false); // State to toggle the menu visibility

@@ -663,6 +663,10 @@ video {
   margin-top: 2rem;
 }
 
+.mt-\[455px\] {
+  margin-top: 455px;
+}
+
 .flex {
   display: flex;
 }
@@ -691,6 +695,18 @@ video {
   height: 2rem;
 }
 
+.h-\[144px\] {
+  height: 144px;
+}
+
+.h-\[344px\] {
+  height: 344px;
+}
+
+.h-\[62px\] {
+  height: 62px;
+}
+
 .h-full {
   height: 100%;
 }
@@ -713,6 +729,14 @@ video {
 
 .w-8 {
   width: 2rem;
+}
+
+.w-\[277px\] {
+  width: 277px;
+}
+
+.w-\[685px\] {
+  width: 685px;
 }
 
 .w-full {
@@ -776,6 +800,10 @@ video {
   gap: 2rem;
 }
 
+.gap-\[36px\] {
+  gap: 36px;
+}
+
 .space-x-4 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(1rem * var(--tw-space-x-reverse));
@@ -792,6 +820,10 @@ video {
 
 .scroll-smooth {
   scroll-behavior: smooth;
+}
+
+.rounded-\[32px\] {
+  border-radius: 32px;
 }
 
 .rounded-full {
@@ -818,6 +850,16 @@ video {
 .border-gray-300 {
   --tw-border-opacity: 1;
   border-color: rgb(209 213 219 / var(--tw-border-opacity, 1));
+}
+
+.bg-\[\#005BBB\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 91 187 / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[\#FFFDF2\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 253 242 / var(--tw-bg-opacity, 1));
 }
 
 .bg-black {
@@ -874,9 +916,14 @@ video {
   padding-right: 1.25rem;
 }
 
-.py-8 {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .pl-6 {
@@ -897,14 +944,8 @@ video {
   line-height: 2.25rem;
 }
 
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-}
-
-.text-6xl {
-  font-size: 3.75rem;
-  line-height: 1;
+.text-\[48px\] {
+  font-size: 48px;
 }
 
 .text-lg {
@@ -925,6 +966,10 @@ video {
   font-weight: 600;
 }
 
+.leading-\[150\%\] {
+  line-height: 150%;
+}
+
 .tracking-wider {
   letter-spacing: 0.05em;
 }
@@ -937,10 +982,6 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
-}
-
-.opacity-0 {
-  opacity: 0;
 }
 
 .shadow {
@@ -971,6 +1012,10 @@ video {
   transition-duration: 300ms;
 }
 
+.ease-out {
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
 .no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -985,10 +1030,6 @@ video {
   background-color: rgb(229 231 235 / var(--tw-bg-opacity, 1));
 }
 
-.focus-visible\:pointer-events-auto:focus-visible {
-  pointer-events: auto;
-}
-
-.focus-visible\:opacity-100:focus-visible {
-  opacity: 1;
+.hover\:opacity-80:hover {
+  opacity: 0.8;
 }
