@@ -19,8 +19,9 @@ export default function Navbar() {
             <ul className={`nav-links ${isOpen ? 'active' : ''}`}>
                 <CustomLink to="/home" onClick={closeMenu}>Home</CustomLink>
                 <CustomLink to="/courses" onClick={closeMenu}>Courses</CustomLink>
+                <CustomLink to="/videography" onClick={closeMenu}>Videography</CustomLink>
                 <CustomLink to="/faq" onClick={closeMenu}>FAQ</CustomLink>
-                <CustomLink to="/techsupport" onClick={closeMenu}>Tech Support</CustomLink>
+                
             </ul>
             <div className="hamburger" onClick={toggleMenu}>
                 <div className="bar"></div>
