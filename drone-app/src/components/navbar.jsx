@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link, useMatch, useResolvedPath } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import logo from '../pages/logo/kooma.png';
 
 export default function Navbar() {
@@ -13,9 +14,15 @@ export default function Navbar() {
         setIsOpen(false);
     };
 
+    CustomLink.propTypes = {
+        to: PropTypes.string.isRequired,
+        children: PropTypes.node.isRequired,
+        onClick: PropTypes.func,
+    };
+
     return (
         <nav className="nav">
-            <img src={logo} alt="logo" />
+            <img src={logo} alt="KOOMA logo" />
             <ul className={`nav-links ${isOpen ? 'active' : ''}`}>
                 <CustomLink to="/home" onClick={closeMenu}>Home</CustomLink>
                 <CustomLink to="/courses" onClick={closeMenu}>Courses</CustomLink>

@@ -13,29 +13,30 @@ body {
     
 }
 .nav {
-    background-color: #0057b7;
+    background-color: #002a57;
     color: white;
     display: flex;
     justify-content: space-between;
-    font-size: 22px;
+    font-size: 18px;
     align-items: stretch;
-    gap: 2rem;
-    padding: 0.2rem;
     position: sticky; /* Makes the navbar sticky */
     top: 0; /* Sticks the navbar to the top */
     z-index: 1000; /* Ensures the navbar stays on top of other content */
     width: 100%; /* Ensures the navbar takes up the full width */
+    height: 100px;
 }
-.nav img {
-    height: 80px;
-    display: block;
-    margin-left: 20px;
-    margin-right: 10px;
-}
+    .nav img {
+        height: 60px;
+        display: block;
+        margin-left: 200px;
+        margin-top: 20px;
+        margin-right: 10px;
+    }
 .nav ul{
     padding:0;
     margin:0;
-    margin-right: 20px;
+    margin-right: 200px;
+  
     list-style: none;
     display: flex;
     gap: 1rem;
@@ -258,7 +259,7 @@ body {
 
 .footer {
     position: relative;
-    background-color: #0057b7;
+    background-color: #002a57;
     height: 150px;
     width: 100%;
     color: white;
