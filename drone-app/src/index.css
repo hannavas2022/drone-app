@@ -126,6 +126,31 @@ body {
         pointer-events: auto; /* Re-enable interaction */
     }
 
+.about-section h2 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 100%;
+    letter-spacing: 0;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 1rem;
+    color: black;
+}
+
+.about-section h3 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 56px;
+    line-height: 100%;
+    letter-spacing: 0;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 1rem;
+    color: #005BBB;
+}
+
+
 .courses-container {
     display: flex;
     flex-direction: column;
