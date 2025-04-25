@@ -151,51 +151,59 @@ body {
 }
 
 
-.courses-container {
+.course-column {
+    width: 100%;
+    max-width: calc(25% - 20px); /* 4 карточки в ряд для больших экранов */
+    height: 500px; /* Высота всех карточек 500px */
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    margin: auto 10px;
-    margin-top: 20px;
-}
-
-.course-row {
-    display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
-    gap: 1rem;
-    margin-top: -2px;
 }
 
-.course-column {
-    flex: 1;
-    min-width: 250px; 
-    padding: 1rem;
-    border: 1px solid #0aa0f6;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/* Убираем внешние отступы у карт */
+.flip-card {
+    width: 100%;
+    height: 100%;
+    perspective: 1000px; /* Глубина для флипа */
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg); /* Эффект поворота */
+}
+
+/* Стили передней и задней части карточки */
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.flip-card-front {
     background-color: white;
-}
-.course-logo {
-    width: 60px;
-    display: block;
-    margin: auto;
+    padding: 20px;
 }
 
-.coming-button button {
-    background-color: #ccc;
-    cursor: not-allowed;
-    padding: 10px 20px;
-    font-size: 16px;
-    color: black;
-    border: none;
-    border-radius: 5px;
-    text-align: center;
-    display: block;
-    margin: 10px auto;
-    margin-bottom: 10px;
+.flip-card-back {
+    background-color: #f8f8f8;
+    padding: 20px;
+    transform: rotateY(180deg);
 }
 
+
+/*button styles */
 .register-button button {
     background-color: #0057b7;
     cursor: pointer;
@@ -213,6 +221,21 @@ body {
     .register-button button:hover {
         background-color: #0962ea;
     }
+
+.coming-button button {
+    background-color: #ccc;
+    cursor: not-allowed;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    display: block;
+    margin: 10px auto;
+    margin-bottom: 10px;
+}
+
     @media not (prefers-reduced-motion) {
         .slider-image {
         transition: transform 300ms ease-in-out;
@@ -221,65 +244,6 @@ body {
         animation: squish 400ms ease-in-out;
     }
 }
-/* Footer.css */
-
-.footer {
-    position: relative;
-    background-color: #002a57;
-    height: 150px;
-    width: 100%;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.footer-logo {
-    display: flex;
-    flex-direction: column; 
-    align-items: flex-start; 
-    margin-left: 20px; 
-}
-
-.footer-logo-img {
-    width: 100px;
-    height: 100%;
-    display: block;
-}
-
-.footer-copyright {
-    text-align: left; 
-    font-size: 14px;
-    }
-
-.academy-name {
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.copyright {
-    font-size: 14px;
-}
-
-.footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end; 
-    text-align: right; 
-    margin-right: 20px; 
-    font-size: 17px;
-    font-weight: bold;
-   
-}
-
-.social-links {
-    display: flex;
-    gap: 15px;
-    justify-content: flex-end; 
-    padding: 5px;
-}
-
-   
-
 
 @keyframes squish {
     50% {
@@ -291,12 +255,14 @@ body {
 @media screen and (max-width: 768px) {
     .nav {
         flex-direction: column;
-        align-items: flex-start; 
-        width:100%;
+        align-items: flex-start;
+        width: 100%;
     }
-    .navbar-logo{
+
+    .navbar-logo {
         margin-right: 100px;
     }
+
     .nav ul {
         display: none;
         flex-direction: column;
@@ -313,29 +279,14 @@ body {
     }
 
     .nav-links.active {
-        display: flex; 
+        display: flex;
     }
 
     .hamburger {
         display: flex;
     }
-       
-    .footer-logo {
-        display: none;
-    }
 
-    .footer-content {
-        display: block;
-        margin: 10px auto;
-        font-size: 16px;
-        text-align: center;
-    }
 
-    .footer .social-links {
-        gap: 10px;
-        justify-content: center; 
-        padding:5px;
-    }
     .hero-promo {
         height: auto; /* Ensure no fixed height is blocking visibility */
     }
@@ -344,14 +295,18 @@ body {
     .hero-promo__right-block {
         transform: translateY(0); /* Reset translate if not needed on small screens */
     }
+
     .about-section h2 {
         font-size: 28px;
     }
+
     .about-section h3 {
         font-size: 32px;
     }
-    
+    .course-column {
+        flex: 1 1 100%; /* 1 per row */
     }
+}
 @media (min-width: 758px) and (max-width: 1100px) {
     .hero-text-small {
         font-size: 26px !important;
@@ -361,5 +316,7 @@ body {
     .hero-gap-medium {
         gap: 24px !important;
     }
-    
-}
+    .course-column {
+        flex: 1 1 calc(50% - 1rem); /* 2 per row */
+    }
+    }

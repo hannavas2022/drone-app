@@ -1,13 +1,44 @@
-﻿import {useState} from 'react'
-import SQ from '../components/FAQ_SQ.jsx'
-import { data } from '../components/FAQ_data.jsx'
+﻿import { useState, useEffect} from 'react';
+import SQ from '../components/FAQ_SQ.jsx';
+import { data } from '../components/FAQ_data.jsx';
 
 export default function FAQ() {
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
-    const [questions] = useState(data);
+    useEffect(() => {
+        const handleResize = () => setWindowWidth(window.innerWidth);
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    const getHorizontalPadding = () => {
+        if (windowWidth >= 1024) return '200px'; // Desktop
+        if (windowWidth >= 768) return '80px';   // Tablet
+        return '20px';                           // Mobile
+    };
 
     return (
-        <div className="p-4" ><h2 className="mb-6 text-center text-3xl font-bold">FAQ</h2>
-            {questions.map((question) => (<SQ key={question.id} {...question} />))}
-     </div>);
+        <div
+            style={{
+                backgroundColor: '#3d8dc7',
+                padding: `40px ${getHorizontalPadding()}`,
+                
+            }}
+        >
+            <h2
+                style={{
+                    fontSize: '56px',
+                    color: '#002A57',
+                    fontFamily: 'Oswald',
+                    textAlign: 'center',
+                    marginBottom: '32px',
+                }}
+            >
+                FAQ
+            </h2>
+            {data.map((question) => (
+                <SQ key={question.id} {...question} />
+            ))}
+        </div>
+    );
 }
