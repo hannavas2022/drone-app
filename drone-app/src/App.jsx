@@ -22,7 +22,7 @@ function App() {
                     <Route path="/videography" element={<Videography/>} />
                 </Routes>
             </div>
-            <div className="my-12"></div>
+            <div ></div>
             <Footer /> 
         </>
     );
