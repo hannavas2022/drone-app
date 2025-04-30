@@ -83,7 +83,7 @@ export default function About() {
                         <div className="flex h-auto w-full flex-col items-center justify-start gap-[8px] text-center">
                             <img
                                 src={icon1}
-                                alt="Icon with father and daughter"
+                                alt="Icon with father and daughter. Designed by Freepik"
                                 className="h-[224px] w-auto rounded-xl object-cover md:h-[180px]"
                             />
                             <p className="text-left text-[18px] text-black">
@@ -95,7 +95,7 @@ export default function About() {
                         <div className="flex h-auto w-full flex-col items-center justify-start gap-[8px] text-center">
                             <img
                                 src={icon2}
-                                alt="Icon with man piloting drone"
+                                alt="Icon with man piloting drone. Designed by Freepik"
                                 className="h-[224px] w-auto rounded-xl object-cover md:h-[180px]"
                             />
                             <p className="text-left text-[18px] text-black">
@@ -107,7 +107,7 @@ export default function About() {
                         <div className="flex h-auto w-full flex-col items-center justify-start gap-[8px] text-center">
                             <img
                                 src={icon3}
-                                alt="Icon construction worker piloting drone"
+                                alt="Icon construction worker piloting drone. Designed by Freepik"
                                 className="h-[224px] w-auto rounded-xl object-cover md:h-[180px]"
                             />
                             <p className="text-left text-[18px] text-black">
@@ -119,7 +119,7 @@ export default function About() {
                         <div className="flex h-auto w-full flex-col items-center justify-start gap-[8px] text-center">
                             <img
                                 src={icon4}
-                                alt="Equipment icon"
+                                alt="Equipment icon. Designed by Freepik"
                                 className="h-[224px] w-auto rounded-xl object-cover md:h-[180px]"
                             />
                             <p className="text-left text-[18px] text-black">
@@ -132,7 +132,7 @@ export default function About() {
                             <div className="flex h-auto w-full flex-col items-center justify-start gap-[8px] text-center">
                                 <img
                                     src={icon5}
-                                    alt="For all ages icon"
+                                    alt="For all ages icon. Designed by Freepik"
                                     className="h-[224px] w-auto rounded-xl object-cover md:h-[180px]"
                                 />
                                 <p className="text-left text-[18px] text-black">

@@ -32,6 +32,7 @@ export default function FAQ() {
                     fontFamily: 'Oswald',
                     textAlign: 'center',
                     marginBottom: '32px',
+                    fontWeight: '600'
                 }}
             >
                 FAQ

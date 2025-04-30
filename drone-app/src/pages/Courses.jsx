@@ -1,17 +1,26 @@
 ﻿import logo from '../assets/logo/kooma.png';
-
+import levelB from '../assets/images/29759.jpg';
+import summer from '../assets/images/drone_man_02.jpg'
+import levelA from '../assets/images/5608044.jpg'
 export default function Courses() {
     return (
         <div className="courses-container">
             <div className="courses-header">
-                <h2 className="mb-2 text-center text-3xl font-bold">Our Courses</h2>
+                <h2 style={{
+                    fontSize: '56px',
+                    color: '#005BBB',
+                    fontFamily: 'Oswald',
+                    textAlign: 'center',
+                    marginBottom: '32px',
+                    fontWeight: '600'
+                }}>Our Courses</h2>
             </div>
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
                 {/* Course 1 */}
                 <div className="flip-card">
                     <div className="flip-card-inner">
                         <div className="flip-card-front">
-                            <img src={logo} alt="logo" className="card-logo" />
+                            <img src={levelB} alt="men piloting the drone indoor. Designed by Freepik" className="levelB" />
                             <h3 className="p-2 text-center text-xl font-semibold">FPV Drone Pilot Level 1 (Youth)</h3>
                             <p><strong>LEVEL:</strong> Beginner</p>
                             <p><strong>Duration:</strong> 5 lessons (10 hours)</p>
@@ -41,7 +50,7 @@ export default function Courses() {
                 <div className="flip-card">
                     <div className="flip-card-inner">
                         <div className="flip-card-front">
-                            <img src={logo} alt="logo" className="card-logo" />
+                            <img src={levelB} alt="men piloting the drone indoor. Designed by Freepik" className="levelB" />
                             <h3 className="p-2 text-center text-xl font-semibold">FPV Drone Pilot Level 1 (Adults)</h3>
                             <p><strong>LEVEL:</strong> Beginner</p>
                             <p><strong>Duration:</strong> 5 lessons (10 hours)</p>
@@ -71,7 +80,7 @@ export default function Courses() {
                 <div className="flip-card">
                     <div className="flip-card-inner">
                         <div className="flip-card-front">
-                            <img src={logo} alt="logo" className="card-logo" />
+                            <img src={summer} alt="men piloting the drone outdoor. Designed by Freepik" className="summer" />
                             <h3 className="p-2 text-center text-xl font-semibold">FPV Drone Pilot Summer Camp</h3>
                             <p><strong>LEVEL:</strong> Beginner</p>
                             <p><strong>Duration:</strong> 6 lessons (9 hours)</p>
@@ -97,7 +106,7 @@ export default function Courses() {
                 <div className="flip-card">
                     <div className="flip-card-inner">
                         <div className="flip-card-front">
-                            <img src={logo} alt="logo" className="card-logo" />
+                            <img src={levelA} alt="men piloting the drone indoor. Designed by Freepik" className="levelA" />
                             <h3 className="p-2 text-center text-xl font-semibold">Advanced FPV Drone Skills (combined)</h3>
                             <p><strong>LEVEL:</strong> Beginner with basic experience</p>
                             <p><strong>Duration:</strong> 6 lessons</p>
