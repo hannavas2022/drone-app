@@ -1,10 +1,11 @@
 ﻿import logo from '../assets/logo/kooma.png';
 import levelB from '../assets/images/29759.jpg';
-import summer from '../assets/images/drone_man_02.jpg'
-import levelA from '../assets/images/5608044.jpg'
+import summer from '../assets/images/drone_man_02.jpg';
+import levelA from '../assets/images/5608044.jpg';
+
 export default function Courses() {
     return (
-        <div className="courses-container">
+        <div className="courses-container" style={{ padding: '0 200px' }}>
             <div className="courses-header">
                 <h2 style={{
                     fontSize: '56px',
@@ -15,12 +16,13 @@ export default function Courses() {
                     fontWeight: '600'
                 }}>Our Courses</h2>
             </div>
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="mx-auto flex max-w-[1600px] flex-wrap gap-6 px-4 md:px-8">
+                {/*grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 }
                 {/* Course 1 */}
-                <div className="flip-card">
+                <div className="flip-card" style={{ width: '240px' }}>
                     <div className="flip-card-inner">
-                        <div className="flip-card-front">
-                            <img src={levelB} alt="men piloting the drone indoor. Designed by Freepik" className="levelB" />
+                        <div className="flip-card-front flex flex-col justify-between">
+                            <img src={levelB} alt="men piloting the drone indoor. Designed by Freepik" className="h-[180px] w-full rounded-[32px] object-cover" />
                             <h3 className="p-2 text-center text-xl font-semibold">FPV Drone Pilot Level 1 (Youth)</h3>
                             <p><strong>LEVEL:</strong> Beginner</p>
                             <p><strong>Duration:</strong> 5 lessons (10 hours)</p>
@@ -29,10 +31,10 @@ export default function Courses() {
                                 <button className="register-button">Register</button>
                             </a>
                         </div>
-                        <div className="flip-card-back">
+                        <div className="flip-card-back flex flex-col justify-between">
                             <img src={logo} alt="logo" className="card-logo mb-2" />
                             <p>This exciting FPV Drone course is perfect for youth who are eager to experience the thrill of flight and explore the world from above!</p>
-                            <ul className="mt-2 list-disc pl-6">
+                            <ul className="mt-2 list-disc pl-6 text-left">
                                 <li>Theoretical part</li>
                                 <li>Basic skills in drone flight simulator</li>
                                 <li>Basic practical skills on drones indoor</li>
@@ -47,10 +49,10 @@ export default function Courses() {
                 </div>
 
                 {/* Course 2 */}
-                <div className="flip-card">
+                <div className="flip-card" style={{ width: '240px' }}>
                     <div className="flip-card-inner">
-                        <div className="flip-card-front">
-                            <img src={levelB} alt="men piloting the drone indoor. Designed by Freepik" className="levelB" />
+                        <div className="flip-card-front flex flex-col justify-between">
+                            <img src={levelB} alt="men piloting the drone indoor. Designed by Freepik" className="h-[180px] w-full rounded-[32px] object-cover" />
                             <h3 className="p-2 text-center text-xl font-semibold">FPV Drone Pilot Level 1 (Adults)</h3>
                             <p><strong>LEVEL:</strong> Beginner</p>
                             <p><strong>Duration:</strong> 5 lessons (10 hours)</p>
@@ -59,10 +61,10 @@ export default function Courses() {
                                 <button className="register-button">Register</button>
                             </a>
                         </div>
-                        <div className="flip-card-back">
+                        <div className="flip-card-back flex flex-col justify-between">
                             <img src={logo} alt="logo" className="card-logo mb-2" />
                             <p>This exciting FPV Drone course is perfect for adults who are eager to experience the thrill of flight and explore the world from above!</p>
-                            <ul className="mt-2 list-disc pl-6">
+                            <ul className="mt-2 list-disc pl-6 text-left">
                                 <li>Theoretical part</li>
                                 <li>Basic skills in drone flight simulator</li>
                                 <li>Basic practical skills on drones indoor</li>
@@ -77,62 +79,62 @@ export default function Courses() {
                 </div>
 
                 {/* Course 3 */}
-                <div className="flip-card">
+                <div className="flip-card" style={{ width: '240px' }}>
                     <div className="flip-card-inner">
-                        <div className="flip-card-front">
-                            <img src={summer} alt="men piloting the drone outdoor. Designed by Freepik" className="summer" />
+                        <div className="flip-card-front flex flex-col justify-between">
+                            <img src={summer} alt="men piloting the drone outdoor. Designed by Freepik" className="h-[180px] w-full rounded-[32px] object-cover" />
                             <h3 className="p-2 text-center text-xl font-semibold">FPV Drone Pilot Summer Camp</h3>
                             <p><strong>LEVEL:</strong> Beginner</p>
                             <p><strong>Duration:</strong> 6 lessons (9 hours)</p>
                             <p><strong>Dates:</strong> will be announced</p>
-                            <button className="register-button" disabled>Summer 2025</button>
+                            <button className="register-button disabled" disabled>Summer 2025</button>
                         </div>
-                        <div className="flip-card-back">
+                        <div className="flip-card-back flex flex-col justify-between">
                             <img src={logo} alt="logo" className="card-logo mb-2" />
                             <p>This exciting FPV Drone course is perfect for adults who are eager to experience the thrill of flight and explore the world from above!</p>
-                            <ul className="mt-2 list-disc pl-6">
+                            <ul className="mt-2 list-disc pl-6 text-left">
                                 <li>Theoretical part</li>
                                 <li>Basic skills in drone flight simulator</li>
                                 <li>Basic practical skills on drones indoor</li>
                                 <li>Safety protocols</li>
                                 <li>All equipment is provided</li>
                             </ul>
-                            <button className="register-button" disabled>Summer 2025</button>
+                            <button className="register-button disabled" disabled>Summer 2025</button>
                         </div>
                     </div>
                 </div>
 
                 {/* Course 4 */}
-                <div className="flip-card">
+                <div className="flip-card" style={{ width: '240px' }}>
                     <div className="flip-card-inner">
-                        <div className="flip-card-front">
-                            <img src={levelA} alt="men piloting the drone indoor. Designed by Freepik" className="levelA" />
+                        <div className="flip-card-front flex flex-col justify-between">
+                            <img src={levelA} alt="men piloting the drone indoor. Designed by Freepik" className="h-[180px] w-full rounded-[32px] object-cover" />
                             <h3 className="p-2 text-center text-xl font-semibold">Advanced FPV Drone Skills (combined)</h3>
                             <p><strong>LEVEL:</strong> Beginner with basic experience</p>
                             <p><strong>Duration:</strong> 6 lessons</p>
                             <p><strong>Dates:</strong> will be announced</p>
-                            <button className="register-button" disabled>Autumn 2025</button>
+                            <button className="register-button disabled" disabled>Autumn 2025</button>
                         </div>
-                        <div className="flip-card-back">
+                        <div className="flip-card-back flex flex-col justify-between">
                             <img src={logo} alt="logo" className="card-logo mb-2" />
                             <p>This course builds on the basics to help you master advanced flight techniques and explore more exciting drone maneuvers.</p>
-                            <ul className="mt-2 list-disc pl-6">
+                            <ul className="mt-2 list-disc pl-6 text-left">
                                 <li>Advanced flight techniques</li>
                                 <li>Flight path planning</li>
                                 <li>Complex maneuvers</li>
                                 <li>Advanced safety protocols</li>
                                 <li>All equipment is provided</li>
                             </ul>
-                            <button className="register-button" disabled>Autumn 2025</button>
+                            <button className="register-button disabled" disabled>Autumn 2025</button>
                         </div>
                     </div>
                 </div>
 
-                {/* Добавь оставшиеся 4 курса по аналогии сюда, если нужно */}
             </div>
         </div>
     );
 }
+
 
 {/*
                   Course 5

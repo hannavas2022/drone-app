@@ -11,6 +11,7 @@ body {
     margin: 0;
     height: 100%;
     background: #fffdf2;
+    overflow-x: hidden;
 }
 .nav {
     background-color: #002a57;
@@ -151,75 +152,74 @@ body {
 }
 
 
-.course-column {
-    width: 100%;
-    max-width: calc(25% - 20px); /* 4 карточки в ряд для больших экранов */
-    height: 500px; /* Высота всех карточек 500px */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.courses-container {
+    padding: 0 200px;
 }
 
-/* Убираем внешние отступы у карт */
 .flip-card {
     width: 100%;
-    height: 100%;
-    perspective: 1000px; /* Глубина для флипа */
+    height: 500px;
+    perspective: 1000px;
+    position: relative;
 }
 
 .flip-card-inner {
     position: relative;
     width: 100%;
     height: 100%;
-    transform-style: preserve-3d;
     transition: transform 0.6s;
+    transform-style: preserve-3d;
 }
 
 .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg); /* Эффект поворота */
-}
-
-/* Стили передней и задней части карточки */
-.flip-card-front, .flip-card-back {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.flip-card-front {
-    background-color: white;
-    padding: 20px;
-}
-
-.flip-card-back {
-    background-color: #f8f8f8;
-    padding: 20px;
     transform: rotateY(180deg);
 }
 
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 32px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 32px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
-/*button styles */
-.register-button button {
+.flip-card-back {
+    transform: rotateY(180deg);
+    z-index: 2;
+    font-size: 14px;
+}
+
+.register-button {
     background-color: #0057b7;
     cursor: pointer;
     padding: 10px 20px;
     font-size: 16px;
     color: white;
     border: none;
-    border-radius: 5px;
-    text-align: center;
+    border-radius: 32px;
     display: block;
-    margin: 10px auto;
-    margin-top: 10px;
+    margin: 20px auto 0 auto;
+    text-align: center;
 }
 
-    .register-button button:hover {
+    .register-button:hover {
         background-color: #0962ea;
+    }
+
+    .register-button.disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+        color: black;
     }
 
 .coming-button button {
@@ -265,17 +265,19 @@ body {
 
     .nav ul {
         display: none;
-        flex-direction: column;
-        gap: 1rem;
-        width: auto;
-        margin-right: 0;
-        max-width: 100%;
-        padding: 1rem;
-        background-color: #0aa0f6;
-        position: absolute;
-        right: 0;
-        top: 80px;
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    flex-direction: column;
+    gap: 1rem;
+    width: 100vw;
+    max-width: 320px;
+    padding: 1rem;
+    background-color: #0aa0f6;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
     }
 
     .nav-links.active {
@@ -303,9 +305,7 @@ body {
     .about-section h3 {
         font-size: 32px;
     }
-    .course-column {
-        flex: 1 1 100%; /* 1 per row */
-    }
+    
 }
 @media (min-width: 758px) and (max-width: 1100px) {
     .hero-text-small {
@@ -316,7 +316,5 @@ body {
     .hero-gap-medium {
         gap: 24px !important;
     }
-    .course-column {
-        flex: 1 1 calc(50% - 1rem); /* 2 per row */
-    }
+    
     }
