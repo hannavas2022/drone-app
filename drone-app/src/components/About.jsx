@@ -16,7 +16,7 @@ export default function About() {
                 {/* Our Mission */}
                 
                 <div
-                    style={{ border: "1px solid #005BBB", borderRadius: "48px" }}
+                    
                     className="about-section p-6 text-center"
                 >
                     <h2>Our Mission:</h2>
@@ -41,7 +41,7 @@ export default function About() {
 
                 {/* Our Story */}
                 <div
-                    style={{ border: "1px solid #005BBB", borderRadius: "48px" }}
+                    
                     className="p-6 text-center"
                 >
                     <h3>Our Story</h3>
@@ -72,7 +72,7 @@ export default function About() {
 
                 {/* Why Choose Us */}
                 <div
-                    style={{ border: "1px solid #005BBB", borderRadius: "48px" }}
+                    
                     className="p-6 text-center"
                 >
                     <h3>Why Choose Us?</h3>
@@ -156,7 +156,7 @@ export default function About() {
 
 
                 {/* Join Our Community */}
-                <div style={{ border: "1px solid #005BBB", borderRadius: "48px" }} className="p-6 text-center">
+                <div  className="p-6 text-center">
                     <h3>Join Our Community</h3>
 
                     <div className="mt-6 flex flex-col items-center justify-between lg:flex-row">
