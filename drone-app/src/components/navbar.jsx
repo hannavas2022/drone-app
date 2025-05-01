@@ -35,6 +35,7 @@ export default function Navbar() {
                         <CustomLink to="/videography" onClick={closeMenu}>Videography</CustomLink>
                         <CustomLink to="/faq" onClick={closeMenu}>FAQ</CustomLink>
                     </ul>
+                    
                 </div>
             </nav>
 

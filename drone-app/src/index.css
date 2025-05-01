@@ -44,6 +44,8 @@ body {
     flex-direction: column;
     gap: 6px;
     cursor: pointer;
+    position: relative;
+    z-index: 1100;
 }
 
 .bar {
@@ -61,7 +63,7 @@ body {
 .nav-links {
     display: flex;
     list-style: none;
-    align-items: flex-end;
+    align-items: flex-start;
     margin-right: 200px;
 }
 
@@ -264,20 +266,22 @@ body {
     }
 
 /* Mobile responsiveness */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 758px) {
     .hamburger {
         display: flex;
         margin-right:30px;
     }
-
+    .nav-container {
+        padding: 0 16px;
+    }
     .nav-links {
         display: none;
         flex-direction: column;
         background-color: #002a57;
-        position: fixed; /* фиксированное позиционирование */
-        top: 64px; /* немного ниже навбара */
-        right: 0; /* прижать к правому краю страницы */
-        padding: 16px 32px; /* внутренние отступы */
+        position: absolute; /* фиксированное позиционирование */
+        top: 60px; /* немного ниже навбара */
+        right: -160px; /* прижать к правому краю страницы */
+        padding: 10px 10px; /* внутренние отступы */
         border-radius: 8px 0 0 8px;
         width: max-content;
         min-width: 200px;
@@ -323,7 +327,7 @@ body {
         font-size: 32px;
     }
     .navbar-logo {
-        margin-left: 30px;
+        margin-left: 16px;
     }
      
 }
@@ -337,7 +341,7 @@ body {
         gap: 24px !important;
     }
     .navbar-logo {
-        margin-left: 80px;
+        margin-left: 70px;
     }
     .nav-links {
         margin-right: 80px;
