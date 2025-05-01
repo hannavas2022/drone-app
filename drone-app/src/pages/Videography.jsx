@@ -1,5 +1,5 @@
 ﻿import { useRef, useState } from 'react';
-import { ChevronLeft, ChevronRight, Play } from 'lucide-react';
+import { ArrowBigLeft, ArrowBigRight, Play } from 'lucide-react';
 import PropTypes from 'prop-types';
 
 const videoData = {
@@ -31,49 +31,52 @@ const VideoCarousel = ({ title, videos }) => {
 
     return (
         <div className="mb-8">
-            <h2 className="mb-4 text-2xl font-bold">{title}</h2>
+            <h2 className="font-oswald mb-8 mt-6 text-center text-4xl font-bold text-[#005BBB] md:text-4xl lg:text-[56px]">{title}</h2>
             <div className="relative">
-                <button
-                    onClick={() => scroll('left')}
-                    className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-white p-2 rounded-full shadow hover:bg-gray-200"
-                >
-                    <ChevronLeft className="h-6 w-6" />
-                </button>
-                <div
-                    ref={containerRef}
-                    className="no-scrollbar flex space-x-4 overflow-x-auto scroll-smooth px-10" // ✅ updated class to hide scrollbar
-                >
-                    {videos.map((url, index) => (
-                        <div key={index} className="relative min-w-[300px] max-w-[300px] overflow-hidden rounded-xl bg-white shadow-md">
-                            <div className="relative aspect-video bg-black">
-                                {/* If this video is the one being played, show the iframe */}
-                                {visibleVideo === index ? (
-                                    <iframe
-                                        className="h-full w-full"
-                                        src={url}
-                                        title={`YouTube video ${index}`}
-                                        frameBorder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                        allowFullScreen
-                                    ></iframe>
-                                ) : (
-                                    <button
-                                        className="absolute inset-0 m-auto flex h-16 w-16 items-center justify-center rounded-full bg-black bg-opacity-50 text-white"
-                                        onClick={() => setVisibleVideo(index)}
-                                    >
-                                        <Play className="h-8 w-8" />
-                                    </button>
-                                )}
+                <div className="flex items-center gap-x-6 px-4">
+                    <button
+                        onClick={() => scroll('left')}
+                        className="bg-[#005BBB] p-2 rounded-lg shadow hover:bg-[#FFD500] text-white hover:text-[#005BBB]"
+                    >
+                        <ArrowBigLeft className="h-6 w-6" />
+                    </button>
+
+                    <div
+                        ref={containerRef}
+                        className="no-scrollbar flex space-x-4 overflow-x-auto scroll-smooth px-4"
+                    >
+                        {videos.map((url, index) => (
+                            <div key={index} className="relative min-w-[250px] max-w-[300px] overflow-hidden rounded-xl bg-[#005BBB] shadow-md sm:min-w-[280px] md:min-w-[300px]">
+                                <div className="relative aspect-video bg-black/70">
+                                    {visibleVideo === index ? (
+                                        <iframe
+                                            className="h-full w-full"
+                                            src={url}
+                                            title={`YouTube video ${index}`}
+                                            frameBorder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowFullScreen
+                                        ></iframe>
+                                    ) : (
+                                        <button
+                                                className="absolute inset-0 m-auto flex h-16 w-16 items-center justify-center rounded-full bg-[#005BBB] bg-opacity-50 text-white hover:bg-[#FFD500] hover:text-[#005BBB]"
+                                            onClick={() => setVisibleVideo(index)}
+                                        >
+                                            <Play className="h-8 w-8 hover:bg-[#FFD500]" />
+                                        </button>
+                                    )}
+                                </div>
                             </div>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
+
+                    <button
+                        onClick={() => scroll('right')}
+                        className="bg-[#005BBB] p-2 rounded-lg shadow hover:bg-[#FFD500] text-white hover:text-[#005BBB]"
+                    >
+                        <ArrowBigRight className="h-6 w-6" />
+                    </button>
                 </div>
-                <button
-                    onClick={() => scroll('right')}
-                    className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-white p-2 rounded-full shadow hover:bg-gray-200"
-                >
-                    <ChevronRight className="h-6 w-6" />
-                </button>
             </div>
         </div>
     );
@@ -86,7 +89,7 @@ VideoCarousel.propTypes = {
 
 export default function YouTubeSlider() {
     return (
-        <div className="min-h-screen p-8">
+        <div className="mx-4 min-h-screen sm:mx-10 md:mx-20 lg:mx-[200px]">
             {Object.entries(videoData).map(([title, videos]) => (
                 <VideoCarousel key={title} title={title} videos={videos} />
             ))}
