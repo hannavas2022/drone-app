@@ -15,7 +15,7 @@ export default function Footer() {
                 <p className="mb-4 font-semibold text-[16px]">
                     Join us on social media and stay tuned:
                 </p>
-                <div className="flex flex-wrap justify-center gap-[24px] p-2">
+                <div className="flex flex-wrap justify-center gap-[16px] p-2 sm:gap-[20px] md:gap-[24px]">
                     {[facebook, instagram, youtube, email, whatsapp, threads, tiktok].map((icon, i) => (
                         <img key={i} src={icon} alt="social" className="h-[24px] w-[24px]" />
                     ))}
