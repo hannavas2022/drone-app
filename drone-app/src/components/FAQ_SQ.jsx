@@ -13,7 +13,7 @@ export default function SQ({ question, answer }) {
                 boxShadow: '0px 1px 3px 0px #CADDFF4D',  // Light shadow effect
                 backdropFilter: 'blur(16px)',  // Apply blur effect behind the container
                 borderRadius: '32px',  // Rounded corners
-                padding: '20px',
+                padding: '40px',
                 marginBottom: '32px',  // Space between containers
                 border: '2px solid #DCE4ED80 50%',  // Border color matching the background
             }}
