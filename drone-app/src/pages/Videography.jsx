@@ -1,98 +1,86 @@
-﻿import { useRef, useState } from 'react';
-import { ArrowBigLeft, ArrowBigRight, Play } from 'lucide-react';
-import PropTypes from 'prop-types';
-
-const videoData = {
-    Sport: [
-        'https://www.youtube.com/embed/qvXS7fwcnI0?si=w7VJZ_fIU0UaDiUC',
-        'https://www.youtube.com/embed/qvXS7fwcnI0?si=w7VJZ_fIU0UaDiUC',
-        'https://www.youtube.com/embed/qvXS7fwcnI0?si=w7VJZ_fIU0UaDiUC',
-        'https://www.youtube.com/embed/qvXS7fwcnI0?si=w7VJZ_fIU0UaDiUC',
-        'https://www.youtube.com/embed/qvXS7fwcnI0?si=w7VJZ_fIU0UaDiUC',
-        'https://www.youtube.com/embed/qvXS7fwcnI0?si=w7VJZ_fIU0UaDiUC'
-    ],
-    
-};
-
-const VideoCarousel = ({ title, videos }) => {
-    const containerRef = useRef(null);
-    const [visibleVideo, setVisibleVideo] = useState(null); // Track which video is being played
-
-    const scroll = (direction) => {
-        if (containerRef.current) {
-            const { scrollLeft, clientWidth } = containerRef.current;
-            const scrollAmount = clientWidth;
-            containerRef.current.scrollTo({
-                left: direction === 'left' ? scrollLeft - scrollAmount : scrollLeft + scrollAmount,
-                behavior: 'smooth'
-            });
-        }
-    };
-
+﻿const BookForm = () => {
     return (
-        <div className="mb-8">
-            <h2 className="font-oswald mb-8 mt-6 text-center text-4xl font-bold text-[#005BBB] md:text-4xl lg:text-[56px]">{title}</h2>
-            <div className="relative">
-                <div className="flex items-center gap-x-6 px-4">
-                    <button
-                        onClick={() => scroll('left')}
-                        className="bg-[#005BBB] p-2 rounded-lg shadow hover:bg-[#FFD500] text-white hover:text-[#005BBB]"
-                    >
-                        <ArrowBigLeft className="h-6 w-6" />
-                    </button>
+        <div id="book-form" className="flex min-h-screen items-center justify-center px-4 py-12">
+            <form
+                action="https://formsubmit.co/koomadrone@gmail.com"
+                method="POST"
+                className="w-full max-w-lg rounded-lg bg-white p-8 shadow-md"
+            >
+                <h2 className="mb-6 text-center text-2xl font-bold text-[#005BBB]">Book your drone shooting today</h2>
 
-                    <div
-                        ref={containerRef}
-                        className="no-scrollbar flex space-x-4 overflow-x-auto scroll-smooth px-4"
-                    >
-                        {videos.map((url, index) => (
-                            <div key={index} className="relative min-w-[250px] max-w-[300px] overflow-hidden rounded-xl bg-[#005BBB] shadow-md sm:min-w-[280px] md:min-w-[300px]">
-                                <div className="relative aspect-video bg-black/70">
-                                    {visibleVideo === index ? (
-                                        <iframe
-                                            className="h-full w-full"
-                                            src={url}
-                                            title={`YouTube video ${index}`}
-                                            frameBorder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                            allowFullScreen
-                                        ></iframe>
-                                    ) : (
-                                        <button
-                                                className="absolute inset-0 m-auto flex h-16 w-16 items-center justify-center rounded-full bg-[#005BBB] bg-opacity-50 text-white hover:bg-[#FFD500] hover:text-[#005BBB]"
-                                            onClick={() => setVisibleVideo(index)}
-                                        >
-                                            <Play className="h-8 w-8 hover:bg-[#FFD500]" />
-                                        </button>
-                                    )}
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-
-                    <button
-                        onClick={() => scroll('right')}
-                        className="bg-[#005BBB] p-2 rounded-lg shadow hover:bg-[#FFD500] text-white hover:text-[#005BBB]"
-                    >
-                        <ArrowBigRight className="h-6 w-6" />
-                    </button>
+                {/* Name (required) */}
+                <div className="mb-4">
+                    <label className="block text-sm font-semibold text-gray-700">Name</label>
+                    <input
+                        type="text"
+                        name="name"
+                        required
+                        className="mt-1 w-full rounded-md border border-gray-300 p-2 focus:border-[#005BBB] focus:outline-none"
+                    />
                 </div>
-            </div>
+
+                {/* Email (required) */}
+                <div className="mb-4">
+                    <label className="block text-sm font-semibold text-gray-700">Email</label>
+                    <input
+                        type="email"
+                        name="email"
+                        required
+                        className="mt-1 w-full rounded-md border border-gray-300 p-2 focus:border-[#005BBB] focus:outline-none"
+                    />
+                </div>
+
+                {/* Phone Number (optional) */}
+                <div className="mb-4">
+                    <label className="block text-sm font-semibold text-gray-700">Phone Number (optional)</label>
+                    <input
+                        type="tel"
+                        name="phone"
+                        placeholder="e.g. +1 234 567 8901"
+                        className="mt-1 w-full rounded-md border border-gray-300 p-2 focus:border-[#005BBB] focus:outline-none"
+                    />
+                </div>
+
+                {/* Date (required) */}
+                <div className="mb-4">
+                    <label htmlFor="date" className="mb-2 block text-sm font-medium text-gray-700">
+                        Select a date
+                    </label>
+                    <input
+                        type="date"
+                        id="date"
+                        name="date"
+                        required
+                        className="w-full rounded-md border border-gray-300 px-4 py-2 focus:border-[#005BBB] focus:outline-none focus:ring-1 focus:ring-[#005BBB]"
+                    />
+                </div>
+
+                {/* Message (required) */}
+                <div className="mb-4">
+                    <label className="block text-sm font-semibold text-gray-700">Details</label>
+                    <textarea
+                        name="message"
+                        rows="3"
+                        required
+                        className="mt-1 w-full rounded-md border border-gray-300 p-2 focus:border-[#005BBB] focus:outline-none"
+                    ></textarea>
+                </div>
+
+                {/* Hidden fields for formsubmit */}
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_template" value="box" />
+                <input type="hidden" name="_autoresponse" value="Thank you for your message!" />
+
+                {/* Submit */}
+                <button
+                    type="submit"
+                    className="w-full rounded-md bg-[#005BBB] px-4 py-2 text-white transition-colors hover:bg-[#004899]"
+                >
+                    Send Message
+                </button>
+            </form>
         </div>
     );
 };
 
-VideoCarousel.propTypes = {
-    title: PropTypes.string.isRequired,
-    videos: PropTypes.arrayOf(PropTypes.string).isRequired
-};
-
-export default function YouTubeSlider() {
-    return (
-        <div className="mx-4 min-h-screen sm:mx-10 md:mx-20 lg:mx-[200px]">
-            {Object.entries(videoData).map(([title, videos]) => (
-                <VideoCarousel key={title} title={title} videos={videos} />
-            ))}
-        </div>
-    );
-}
+export default BookForm;

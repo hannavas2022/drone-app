@@ -71,16 +71,13 @@ export default function About() {
 
 
                 {/* Why Choose Us */}
-                <div
-                    
-                    className="p-6 text-center"
-                >
+                <div className="p-6 text-center">
                     <h3>Why Choose Us?</h3>
 
-                    {/* Desktop & Tablet View (hidden on small screens) */}
-                    <div className="mx-auto mt-8 hidden max-w-4xl gap-12 sm:grid sm:grid-cols-1 md:grid-cols-2">
+                    {/* Layout for Large Screens */}
+                    <div className="mx-auto ml-12 mr-12 mt-8 hidden gap-[48px] lg:grid lg:grid-cols-3 lg:place-items-center">
                         {/* Item 1 */}
-                        <div className="flex h-auto w-full flex-col items-center justify-start gap-[8px] text-center">
+                        <div className="flex w-[366px] flex-col items-center gap-[8px] text-center">
                             <img
                                 src={icon1}
                                 alt="Icon with father and daughter. Designed by Freepik"
@@ -92,7 +89,7 @@ export default function About() {
                         </div>
 
                         {/* Item 2 */}
-                        <div className="flex h-auto w-full flex-col items-center justify-start gap-[8px] text-center">
+                        <div className="flex w-[366px] flex-col items-center gap-[8px] text-center">
                             <img
                                 src={icon2}
                                 alt="Icon with man piloting drone. Designed by Freepik"
@@ -104,7 +101,7 @@ export default function About() {
                         </div>
 
                         {/* Item 3 */}
-                        <div className="flex h-auto w-full flex-col items-center justify-start gap-[8px] text-center">
+                        <div className="flex w-[366px] flex-col items-center gap-[8px] text-center">
                             <img
                                 src={icon3}
                                 alt="Icon construction worker piloting drone. Designed by Freepik"
@@ -114,9 +111,10 @@ export default function About() {
                                 Safety First: Master safety protocols and best practices for responsible drone operation.
                             </p>
                         </div>
-
+                        {/* Row for Items 4 and 5 */}
+                        <div className="lg:col-span-3 lg:flex lg:justify-center lg:gap-[48px]">
                         {/* Item 4 */}
-                        <div className="flex h-auto w-full flex-col items-center justify-start gap-[8px] text-center">
+                        <div className="flex w-[386px] flex-col items-center gap-[8px] text-center">
                             <img
                                 src={icon4}
                                 alt="Equipment icon. Designed by Freepik"
@@ -128,21 +126,83 @@ export default function About() {
                         </div>
 
                         {/* Item 5 */}
-                        <div className="col-span-full flex justify-center">
-                            <div className="flex h-auto w-full flex-col items-center justify-start gap-[8px] text-center">
-                                <img
-                                    src={icon5}
-                                    alt="For all ages icon. Designed by Freepik"
-                                    className="h-[224px] w-auto rounded-xl object-cover md:h-[180px]"
-                                />
-                                <p className="text-left text-[18px] text-black">
-                                    For All Ages: Our courses are tailored for learners starting from 12 years old and up.
-                                </p>
-                            </div>
+                        <div className="flex w-[386px] flex-col items-center gap-[8px] text-center">
+                            <img
+                                src={icon5}
+                                alt="For all ages icon. Designed by Freepik"
+                                className="h-[224px] w-auto rounded-xl object-cover md:h-[180px]"
+                            />
+                            <p className="text-left text-[18px] text-black">
+                                For All Ages: Our courses are tailored for learners starting from 12 years old and up.
+                            </p>
+                        </div>
                         </div>
                     </div>
 
-                    {/* Mobile View: List only (visible only on small screens) */}
+                    {/* Layout for Medium Screens */}
+                    <div className="mx-auto mt-8 hidden gap-[38px] md:place-items-center md:grid md:grid-cols-2 lg:hidden">
+                        {/* Item 1 */}
+                        <div className="flex w-[284px] flex-col items-center gap-[8px] text-center">
+                            <img
+                                src={icon1}
+                                alt="Icon with father and daughter. Designed by Freepik"
+                                className="h-[224px] w-auto rounded-xl object-cover md:h-[180px]"
+                            />
+                            <p className="text-left text-[18px] text-black">
+                                Expert Guidance: Learn from skilled instructors with years of FPV flying and teaching experience
+                            </p>
+                        </div>
+
+                        {/* Item 2 */}
+                        <div className="flex w-[284px] flex-col items-center gap-[8px] text-center">
+                            <img
+                                src={icon2}
+                                alt="Icon with man piloting drone. Designed by Freepik"
+                                className="h-[224px] w-auto rounded-xl object-cover md:h-[180px]"
+                            />
+                            <p className="text-left text-[18px] text-black">
+                                Hands-On Training: Dive into interactive sessions with simulators, real drones, and practical flights.
+                            </p>
+                        </div>
+
+                        {/* Item 3 */}
+                        <div className="flex w-[284px] flex-col items-center gap-[8px] text-center">
+                            <img
+                                src={icon3}
+                                alt="Icon construction worker piloting drone. Designed by Freepik"
+                                className="h-[224px] w-auto rounded-xl object-cover md:h-[180px]"
+                            />
+                            <p className="text-left text-[18px] text-black">
+                                Safety First: Master safety protocols and best practices for responsible drone operation.
+                            </p>
+                        </div>
+
+                        {/* Item 4 */}
+                        <div className="flex w-[284px] flex-col items-center gap-[8px] text-center">
+                            <img
+                                src={icon4}
+                                alt="Equipment icon. Designed by Freepik"
+                                className="h-[224px] w-auto rounded-xl object-cover md:h-[180px]"
+                            />
+                            <p className="text-left text-[18px] text-black">
+                                All Equipment Provided: No gear? No problem! We supply everything you need to succeed.
+                            </p>
+                        </div>
+
+                        {/* Item 5 */}
+                        <div className="col-span-2 mx-auto flex w-[284px] flex-col items-center justify-center gap-[8px] text-center">
+                            <img
+                                src={icon5}
+                                alt="For all ages icon. Designed by Freepik"
+                                className="h-[224px] w-auto rounded-xl object-cover md:h-[180px]"
+                            />
+                            <p className="text-left text-[18px] text-black">
+                                For All Ages: Our courses are tailored for learners starting from 12 years old and up.
+                            </p>
+                        </div>
+                    </div>
+
+                    {/* Mobile View */}
                     <div className="mt-6 text-center sm:hidden">
                         <ul className="list-disc space-y-4 pl-6 text-[18px] text-black">
                             <li>Expert Guidance: Learn from skilled instructors with years of FPV flying and teaching experience</li>
@@ -153,7 +213,6 @@ export default function About() {
                         </ul>
                     </div>
                 </div>
-
 
                 {/* Join Our Community */}
                 <div  className="p-6 text-center">
@@ -169,7 +228,7 @@ export default function About() {
                             </p>
                             <div className="mt-6 flex justify-center lg:justify-center">
                                 <button
-                                    onClick={() => navigate('/courses')}
+                                    onClick={() => navigate('/courses#courses-header')}
                                     className="h-[56px] w-full max-w-[277px] rounded-[32px] bg-[#005BBB] px-6 py-3 text-[20px] font-semibold text-[#FFD500] transition-opacity duration-300 ease-out hover:opacity-80"
                                 >
                                     Join us

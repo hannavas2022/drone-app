@@ -31,7 +31,7 @@ export default function HeroPromo() {
                         Drone Videography: <br className="hidden md:block" /> Sport and Real Estate
                     </h2>
                     <button
-                        onClick={() => navigate('/videography')}
+                        onClick={() => navigate('/videography#book-from')}
                         className="w-full max-w-[277px] h-[56px] rounded-[32px] bg-[#005BBB] px-6 py-3 text-[20px] font-semibold text-[#FFD500] transition-opacity duration-300 ease-out hover:opacity-80"
                     >
                         Book Now
