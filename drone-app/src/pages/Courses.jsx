@@ -1,4 +1,5 @@
-﻿import logo from '../assets/logo/kooma.png';
+﻿
+import logo_blue from '../assets/logo/kooma_blue.png';
 import levelB from '../assets/images/29759.jpg';
 import summer from '../assets/images/drone_man_02.jpg';
 import levelA from '../assets/images/5608044.jpg';
@@ -28,7 +29,7 @@ export default function Courses() {
                             </a>
                         </div>
                         <div className="flip-card-back flex flex-col justify-between">
-                            <img src={logo} alt="logo" className="card-logo mb-2" />
+                            <img src={logo_blue} alt="logo" className="card-logo mb-2" />
                             <p>This exciting FPV Drone course is perfect for youth who are eager to experience the thrill of flight and explore the world from above!</p>
                             <ul className="mt-2 list-disc pl-6 text-left">
                                 <li>Theoretical part</li>
@@ -58,7 +59,7 @@ export default function Courses() {
                             </a>
                         </div>
                         <div className="flip-card-back flex flex-col justify-between">
-                            <img src={logo} alt="logo" className="card-logo mb-2" />
+                            <img src={logo_blue} alt="logo" className="card-logo mb-2" />
                             <p>This exciting FPV Drone course is perfect for adults who are eager to experience the thrill of flight and explore the world from above!</p>
                             <ul className="mt-2 list-disc pl-6 text-left">
                                 <li>Theoretical part</li>
@@ -86,7 +87,7 @@ export default function Courses() {
                             <button className="register-button disabled" disabled>Summer 2025</button>
                         </div>
                         <div className="flip-card-back flex flex-col justify-between">
-                            <img src={logo} alt="logo" className="card-logo mb-2" />
+                            <img src={logo_blue} alt="logo" className="card-logo mb-2" />
                             <p>This exciting FPV Drone course is perfect for adults who are eager to experience the thrill of flight and explore the world from above!</p>
                             <ul className="mt-2 list-disc pl-6 text-left">
                                 <li>Theoretical part</li>
@@ -112,7 +113,7 @@ export default function Courses() {
                             <button className="register-button disabled" disabled>Autumn 2025</button>
                         </div>
                         <div className="flip-card-back flex flex-col justify-between">
-                            <img src={logo} alt="logo" className="card-logo mb-2" />
+                            <img src={logo_blue} alt="logo" className="card-logo mb-2" />
                             <p>This course builds on the basics to help you master advanced flight techniques and explore more exciting drone maneuvers.</p>
                             <ul className="mt-2 list-disc pl-6 text-left">
                                 <li>Advanced flight techniques</li>

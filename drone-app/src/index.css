@@ -194,7 +194,7 @@ body {
     backface-visibility: hidden;
     width: 100%;
     height: 100%;
-    background-color: #fff;
+    background-color: #DCE4ED;
     border-radius: 32px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 32px;
@@ -215,12 +215,13 @@ body {
     cursor: pointer;
     padding: 10px 20px;
     font-size: 16px;
-    color: white;
+    color: #FFD500;
     border: none;
     border-radius: 32px;
     display: block;
     margin: 20px auto 0 auto;
     text-align: center;
+    font-weight: 600;
 }
 
     .register-button:hover {

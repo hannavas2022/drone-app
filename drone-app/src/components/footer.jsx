@@ -39,7 +39,7 @@ export default function Footer() {
                         <a href="https://www.youtube.com/@Koomadrone" target="_blank" rel="noopener noreferrer">
                             <img src={youtube} alt="YouTube" className="h-[24px] w-[24px]" />
                         </a>
-                        <a href="mailto:your-email@example.com">
+                        <a href="mailto:koomadrone@gmail.com">
                             <img src={email} alt="Email" className="h-[24px] w-[24px]" />
                         </a>
                         <a href="https://wa.me/your-phone-number" target="_blank" rel="noopener noreferrer">
