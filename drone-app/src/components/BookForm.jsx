@@ -56,66 +56,76 @@ const BookForm = () => {
     };
 
     return (
-        <div className="flex min-h-screen items-center justify-center px-4 py-12">
-            <form onSubmit={handleSubmit} className="w-full max-w-lg rounded-lg bg-white p-8 shadow-md">
-                <h2 className="mb-6 text-center text-2xl font-bold text-[#005BBB]">
-                    Book your drone shooting today
-                </h2>
+        <div id="book-form" className="flex min-h-screen items-center justify-center px-4 py-12">
+            <form
+                onSubmit={handleSubmit}
+                action="https://formsubmit.co/koomadrone@gmail.com"
+                method="POST"
+                className="w-full max-w-lg rounded-lg bg-[#002A5780] p-8 shadow-md"
+            >
+                <h2 className="mb-6 text-center text-2xl font-semibold text-white">Book your drone shooting today</h2>
 
-                {/* Name */}
+                {/* Name (required) */}
                 <div className="mb-4">
-                    <label className="block text-sm font-semibold text-gray-700">Name *</label>
+                    <label className="block text-sm font-semibold text-white"></label>
                     <input
                         type="text"
                         name="name"
                         value={formData.name}
                         onChange={handleChange}
+                        placeholder="Name"
+                        required
                         className="mt-1 w-full rounded-md border border-gray-300 p-2 focus:border-[#005BBB] focus:outline-none"
                     />
                     {errors.name && <p className="mt-1 text-sm text-red-500">{errors.name}</p>}
                 </div>
 
-                {/* Email */}
+                {/* Email (required) */}
                 <div className="mb-4">
-                    <label className="block text-sm font-semibold text-gray-700">Email *</label>
+                    <label className="block text-sm font-semibold text-gray-700">Email</label>
                     <input
                         type="email"
                         name="email"
-                        value={formData.email}
-                        onChange={handleChange}
+                        required
                         className="mt-1 w-full rounded-md border border-gray-300 p-2 focus:border-[#005BBB] focus:outline-none"
                     />
-                    {errors.email && <p className="mt-1 text-sm text-red-500">{errors.email}</p>}
                 </div>
 
-                {/* Date */}
+                {/* Phone Number (optional) */}
+                <div className="mb-4">
+                    <label className="block text-sm font-semibold text-gray-700">Phone Number (optional)</label>
+                    <input
+                        type="tel"
+                        name="phone"
+                        placeholder="e.g. +1 234 567 8901"
+                        className="mt-1 w-full rounded-md border border-gray-300 p-2 focus:border-[#005BBB] focus:outline-none"
+                    />
+                </div>
+
+                {/* Date (required) */}
                 <div className="mb-4">
                     <label htmlFor="date" className="mb-2 block text-sm font-medium text-gray-700">
-                        Select a date *
+                        Select a date
                     </label>
                     <input
                         type="date"
                         id="date"
                         name="date"
-                        value={formData.date}
-                        onChange={handleChange}
+                        required
                         className="w-full rounded-md border border-gray-300 px-4 py-2 focus:border-[#005BBB] focus:outline-none focus:ring-1 focus:ring-[#005BBB]"
                     />
-                    {errors.date && <p className="mt-1 text-sm text-red-500">{errors.date}</p>}
                 </div>
 
-                {/* Message */}
+                {/* Message (required) */}
                 <div className="mb-4">
-                    <label className="block text-sm font-semibold text-gray-700">Details (optional)</label>
+                    <label className="block text-sm font-semibold text-gray-700">Details</label>
                     <textarea
                         name="message"
-                        value={formData.message}
-                        onChange={handleChange}
-                        rows="2"
+                        rows="3"
+                        required
                         className="mt-1 w-full rounded-md border border-gray-300 p-2 focus:border-[#005BBB] focus:outline-none"
                     ></textarea>
                 </div>
-
                 <button
                     type="submit"
                     className="w-full rounded-md bg-[#005BBB] px-4 py-2 text-white transition-colors hover:bg-[#004899]"
