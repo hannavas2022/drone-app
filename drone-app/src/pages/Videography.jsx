@@ -10,16 +10,18 @@ const videoData = {
         'https://www.youtube.com/embed/qvXS7fwcnI0?si=w7VJZ_fIU0UaDiUC',
         'https://www.youtube.com/embed/qvXS7fwcnI0?si=w7VJZ_fIU0UaDiUC',
         'https://www.youtube.com/embed/qvXS7fwcnI0?si=w7VJZ_fIU0UaDiUC',
-        'https://www.youtube.com/embed/qvXS7fwcnI0?si=w7VJZ_fIU0UaDiUC'
     ],
     RealEstate: [
         'https://www.youtube.com/embed/aRe-gkMIQjY?si=W-3cI9PfXkI1egKy',
+        'https://www.youtube.com/embed/aRe-gkMIQjY?si=W-3cI9PfXkI1egKy',
+        'https://www.youtube.com/embed/aRe-gkMIQjY?si=W-3cI9PfXkI1egKy',
+        'https://www.youtube.com/embed/aRe-gkMIQjY?si=W-3cI9PfXkI1egKy',
     ]
-
 };
+
 const VideoCarousel = ({ title, videos }) => {
     const containerRef = useRef(null);
-    const [visibleVideo, setVisibleVideo] = useState(null); // Track which video is being played
+    const [visibleVideoIndex, setVisibleVideoIndex] = useState(null);
 
     const scroll = (direction) => {
         if (containerRef.current) {
@@ -32,27 +34,34 @@ const VideoCarousel = ({ title, videos }) => {
         }
     };
 
-    
-
     return (
-        <div className="mb-8">
-            <h2 className="font-oswald font-semiboldold mb-8 mt-6 text-center text-4xl text-white md:text-4xl lg:text-[56px]">{title}</h2>
+        <div className="mb-12">
+            <h2 className="font-oswald mb-6 mt-6 text-center text-4xl font-semibold text-white md:text-4xl lg:text-[56px]">
+                {title}
+            </h2>
+
             <div className="relative">
-                <div className="flex items-center gap-x-6 px-4">
+                <div className="flex flex-col items-center md:flex-row md:gap-x-6 md:px-4">
+                    {/* Scroll Left - hidden on small screens */}
                     <button
                         onClick={() => scroll('left')}
-                        className="bg-[#005BBB] p-2 rounded-lg shadow hover:bg-[#FFD500] text-white hover:text-[#005BBB]"
+                        className="hidden md:inline-block bg-[#005BBB] p-2 rounded-lg shadow hover:bg-[#FFD500] text-white hover:text-[#005BBB]"
                     >
                         <ArrowBigLeft className="h-6 w-6" />
                     </button>
+
+                    {/* Video List */}
                     <div
                         ref={containerRef}
-                        className="no-scrollbar flex space-x-4 overflow-x-auto scroll-smooth px-4"
+                        className="no-scrollbar flex w-full flex-col gap-4 overflow-x-auto scroll-smooth px-4 md:flex-row md:space-x-4 md:gap-0"
                     >
                         {videos.map((url, index) => (
-                            <div key={index} className="relative min-w-[250px] max-w-[300px] overflow-hidden rounded-xl bg-[#005BBB] shadow-md sm:min-w-[280px] md:min-w-[300px]">
+                            <div
+                                key={index}
+                                className="relative w-full overflow-hidden rounded-xl bg-[#005BBB] shadow-md md:min-w-[280px] md:max-w-[300px]"
+                            >
                                 <div className="relative aspect-video bg-black/70">
-                                    {visibleVideo === index ? (
+                                    {visibleVideoIndex === index ? (
                                         <iframe
                                             className="h-full w-full"
                                             src={url}
@@ -64,18 +73,20 @@ const VideoCarousel = ({ title, videos }) => {
                                     ) : (
                                         <button
                                             className="absolute inset-0 m-auto flex h-16 w-16 items-center justify-center rounded-full bg-[#005BBB] bg-opacity-50 text-white hover:bg-[#FFD500] hover:text-[#005BBB]"
-                                            onClick={() => setVisibleVideo(index)}
+                                            onClick={() => setVisibleVideoIndex(index)}
                                         >
-                                            <Play className="h-8 w-8 hover:bg-[#FFD500]" />
+                                            <Play className="h-8 w-8" />
                                         </button>
                                     )}
                                 </div>
                             </div>
                         ))}
                     </div>
+
+                    {/* Scroll Right - hidden on small screens */}
                     <button
                         onClick={() => scroll('right')}
-                        className="bg-[#005BBB] p-2 rounded-lg shadow hover:bg-[#FFD500] text-white hover:text-[#005BBB]"
+                        className="hidden md:inline-block bg-[#005BBB] p-2 rounded-lg shadow hover:bg-[#FFD500] text-white hover:text-[#005BBB]"
                     >
                         <ArrowBigRight className="h-6 w-6" />
                     </button>
@@ -93,7 +104,7 @@ VideoCarousel.propTypes = {
 export default function YouTubeSlider() {
     return (
         <>
-            <div className="mx-4 mb-12 sm:mx-10 md:mx-20 lg:mx-[200px]">
+            <div className="mx-4 min-h-screen sm:mx-10 md:mx-20 lg:mx-[200px]">
                 {Object.entries(videoData).map(([title, videos]) => (
                     <VideoCarousel key={title} title={title} videos={videos} />
                 ))}

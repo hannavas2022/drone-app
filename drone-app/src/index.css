@@ -247,7 +247,14 @@ body {
     margin-bottom: 10px;
 }
 
-    
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+} 
 
 /* Mobile responsiveness */
 @media screen and (max-width: 758px) {
