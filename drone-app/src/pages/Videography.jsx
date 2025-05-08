@@ -104,7 +104,7 @@ VideoCarousel.propTypes = {
 export default function YouTubeSlider() {
     return (
         <>
-            <div className="mx-4 min-h-screen sm:mx-10 md:mx-20 lg:mx-[200px]">
+            <div className="mx-4 mb-12 sm:mx-10 md:mx-20 lg:mx-[200px]">
                 {Object.entries(videoData).map(([title, videos]) => (
                     <VideoCarousel key={title} title={title} videos={videos} />
                 ))}

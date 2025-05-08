@@ -10,7 +10,7 @@ import { useNavigate } from 'react-router-dom';
 export default function About() {
     const navigate = useNavigate();
     return (
-        <section className="about-section rounded-2xl bg-[#fefbf5] px-6 py-10 shadow-lg md:py-20">
+        <section className="about-section rounded-2xl bg-[#fefbf5] px-6 shadow-lg sm:py-2 md:py-10">
             <div className="relative z-20 mx-auto w-full max-w-6xl space-y-16">
 
                 {/* Our Mission */}
