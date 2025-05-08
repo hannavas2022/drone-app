@@ -28,7 +28,7 @@ export default function FAQ() {
             <h2
                 style={{
                     fontSize: '56px',
-                    color: '#002A57',
+                    color: 'white',
                     fontFamily: 'Oswald',
                     textAlign: 'center',
                     marginBottom: '32px',

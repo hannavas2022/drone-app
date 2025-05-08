@@ -3,53 +3,50 @@ import { v4 as uuidv4 } from 'uuid'
 export const data = [
     {
         id: uuidv4(),
-        question: "Do I need to have certification or a license to fly a drone during the course?",
-        answer: "No, you don't need a certification or license to participate in the course. Our Level 1 FPV Drone Course is designed for beginners and includes both theoretical and practical training in a safe and controlled environment. During the course we would be using drones with the weight less than 250g and you don't need any license or certification for that. However, if you wish to fly drones recreationally or commercially outside the course, you may need to follow Canada's drone regulations, such as obtaining an RPAS certification in Canada."
+        question: "Do you offer drone videography for events or businesses?",
+        answer: "Yes! We provide professional aerial video services for sports events, real estate, roofing, and more. Visit our Videography page to view samples or request a quote."
     },
     {
         id: uuidv4(),
-        question: "Do I need to bring my own equipment?",
-        answer: "No, all necessary equipment, including drones, controllers, FPV goggles, and simulators, will be provided during the course. If you already have your own controller or whoop FPV drone - you're welcome to bring it, but it's not required."
+        question: "What is the Drone Base Game, and how can I try it?",
+        answer: "Drone Base is a competitive, team-based drone game we developed where players control drones to capture and defend bases in a custom arena. It`s perfect for schools, camps, and team events. Contact us for demo days or starter kits."
     },
     {
         id: uuidv4(),
-        question: "Who is this course suitable for?",
-        answer: "Our course is designed for anyone interested in learning how to fly FPV drones, including complete beginners. Whether you're a hobbyist, aspiring drone pilot or a professional looking to explore FPV flying, our course offers tailored instruction for all skill levels."
+        question: "Can I book KOOMA for school programs, parties, or workshops?",
+        answer: "Yes, we love working with schools and communities! We offer tailored educational workshops, group activities, and event support. Reach out to customize your program"
+    },
+    
+    {
+        id: uuidv4(),
+        question: "Do I need a drone license or certification to join the course?",
+        answer: "No license is required for our beginner and recreational FPV courses. We provide guidance on Transport Canada regulations and help you prepare if you wish to pursue official certification later."
     },
     {
         id: uuidv4(),
-        question: "Are there any age restrictions for the course?",
-        answer: "Yes, participants must be at least 12 years old. For younger participants, we recommend to contact us first to request additional parental supervision during the course."
+        question: "Do I need to bring my own drone or equipment?",
+        answer: "Nope! We provide all necessary gear - including drones, goggles, and controllers - during the course. You`re also welcome to bring your own if you`d like."
     },
     {
         id: uuidv4(),
-        question: "What safety measures are in place during the course?",
-        answer: "Safety is our top priority. We provide a controlled environment, follow strict safety protocols, and teach students proper handling, pre-flight checks, and emergency procedures to ensure safe flying."
+        question: "What age groups can participate in your courses?",
+        answer: "Our courses are designed for ages 10 and up. We tailor our approach based on the student`s age and skill level."
     },
     {
         id: uuidv4(),
-        question: "Will I receive a certificate upon completing the course?",
-        answer: "Yes, participants who successfully complete the course will receive a certificate of completion. This certificate demonstrates your foundational knowledge and practical skills in FPV drone operation."
+        question: "Will I receive a certificate after completing the course?",
+        answer: "Yes, students who complete our Level 1 FPV course receive a KOOMA Drone Academy certificate of participation and achievement."
     },
     {
         id: uuidv4(),
-        question: "How do I register for the course?",
-        answer: "You can easily register through the buttom Register at the Courses page. If you have any questions, our team is happy to assist via email or phone"
+        question: "Is it possible to book private or custom lessons?",
+        answer: "Absolutely. We offer private sessions for individuals or small groups. Contact us to schedule."
     },
     {
         id: uuidv4(),
-        question: "Can I schedule private lessons?",
-        answer: "Yes, we offer private lessons for individuals or groups who prefer one-on-one instruction or customized training sessions. Contact us for more details and pricing."
+        question: "What should I do if I have technical issues with my FPV drone?",
+        answer: "Our instructors will guide you through troubleshooting during class. For personal drones, we also offer separate technical support and repair assistance by request."
     },
-    {
-        id: uuidv4(),
-        question: "What happens if I miss a class?",
-        answer: "If you miss a class, let us know in advance, and we'll do our best to provide access to additional resources."
-    },
-    {
-        id: uuidv4(),
-        question: "What should I do if I experience technical issues with my FPV drone?",
-        answer: "If you experience technical issues with your FPV drone during or after the course, don't worry - our technical support team is here to help! Contact us via email or phone, and we'll assist you with troubleshooting, repairs or advice on maintaining your equipment. Additionally, our course includes tips on resolving common technical problems, so you'll feel confident managing minor issues on your own."
-    }
+    
 ]
 

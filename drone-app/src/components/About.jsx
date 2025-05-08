@@ -20,12 +20,17 @@ export default function About() {
                     className="about-section p-6 text-center"
                 >
                     <h2>Our Mission:</h2>
-                    <h3>Empowering the Sky</h3>
+                    <h3>Unlock the Sky for Everyone</h3>
 
                     <div className="mt-6 flex flex-col items-center justify-between md:flex-col lg:flex-row">
                         {/* Text block */}
                         <p className="pl-[10px] text-center text-[18px] text-black md:text-center md:w-full lg:text-left lg:w-1/2">
-                            At KOOMA Drone Academy, we believe everyone has the potential to take flight—literally and figuratively. Whether you are a curious beginner, a thrill-seeking FPV racer, or someone dreaming of mastering drone technology, our mission is to make the sky your playground.
+                            At KOOMA Drone, we believe everyone has the potential to take flight—literally and figuratively. Whether you’re a curious beginner, an FPV thrill-seeker, or someone dreaming of mastering drone technology, our mission is to make the sky your playground.
+                            <br />
+                            <br />And now, through <strong>KOOMA Drone Videography</strong>, we’re turning that passion into cinematic storytelling—capturing <strong>sports events, real estate, roof inspections</strong>, and more from stunning aerial perspectives.
+                            <br />
+                            <br />We&apos;re also proud to introduce the launch of the <strong>NEW DRONE SPORTS - Drone Base Battle</strong>, a thrilling new way to engage with drone technology through competitive play. It&apos;s an exciting mix of strategy, skill, and drone control that makes learning to fly both fun and action-packed—ideal for schools, camps, and community programs.
+                            
                         </p>
 
                         {/* Image visible from md+, stacked under text on md */}
@@ -50,7 +55,12 @@ export default function About() {
                     <div className="mt-6 flex flex-col items-center justify-between lg:flex-row">
                         {/* Text on the left */}
                         <p className="pl-[10px] text-center text-[18px] text-black lg:text-left lg:w-1/2">
-                            Our journey started with a simple love for drones and the endless possibilities they offer. Founded in Winnipeg, KOOMA Drone Academy was born from the shared passion of our instructors and a vision to create a space where anyone, regardless of age or skill level, can explore the exciting world of FPV flying. Paul, one of our lead instructors, graduated from the Aviation University in Ukraine and has been obsessed with flights for more than 15 years. His expertise and love for the skies bring unparalleled insight to every class. Joining him is Jack, a skilled enthusiast whose hobby is drones and who is passionate about sharing knowledge and fun with our community of students. Together, they form a team dedicated to making drone flying accessible and enjoyable for everyone.
+                            Our journey started with a simple love for drones and the endless possibilities they offer. Founded in Winnipeg, KOOMA Drone Academy was born from the shared passion of our instructors and a vision to create a space where anyone—regardless of age or skill level—can explore the world of FPV flying and professional drone services.
+                            <br />
+                            <br />Paul, one of our lead instructors, graduated from the Aviation University in Ukraine and has been obsessed with flight for over 15 years. His deep knowledge and passion shape every class and every flight mission. Jack, a skilled drone enthusiast, brings a fresh creative eye to both teaching and aerial videography, helping transform drone footage into stunning visual content.
+                            <br />
+                            <br />Together, they now lead not just the academy but also our <strong>videography division</strong>, providing <strong>high-quality drone footage for events, businesses, inspections, and marketing.</strong>
+                            
                         </p>
 
                         {/* Image on the right (visible from md+, stacked on sm, side-by-side on lg+) */}
@@ -75,65 +85,66 @@ export default function About() {
                     <h3>Why Choose Us?</h3>
 
                     {/* Layout for Large Screens */}
-                    <div className="mx-auto ml-12 mr-12 mt-8 hidden gap-[48px] lg:grid lg:grid-cols-3 lg:place-items-center">
+                    <div className="mx-auto ml-12 mr-12 mt-8 hidden gap-[48px] lg:grid lg:grid-cols-3 lg:items-start lg:justify-items-center">
                         {/* Item 1 */}
-                        <div className="flex w-[366px] flex-col items-center gap-[8px] text-center">
+                        <div className="flex w-[346px] flex-col items-center gap-[8px] text-center">
                             <img
                                 src={icon1}
                                 alt="Icon with father and daughter. Designed by Freepik"
                                 className="h-[224px] w-auto rounded-xl object-cover md:h-[180px]"
                             />
                             <p className="text-left text-[18px] text-black">
-                                Expert Guidance: Learn from skilled instructors with years of FPV flying and teaching experience
+                                <strong>Expert Guidance:</strong> Learn from skilled instructors with years of FPV and aerial shooting experience
                             </p>
                         </div>
 
                         {/* Item 2 */}
-                        <div className="flex w-[366px] flex-col items-center gap-[8px] text-center">
+                        <div className="flex w-[346px] flex-col items-center gap-[8px] text-center">
                             <img
                                 src={icon2}
                                 alt="Icon with man piloting drone. Designed by Freepik"
                                 className="h-[224px] w-auto rounded-xl object-cover md:h-[180px]"
                             />
                             <p className="text-left text-[18px] text-black">
-                                Hands-On Training: Dive into interactive sessions with simulators, real drones, and practical flights.
+                                <strong>Hands-On Training:</strong> Dive into interactive sessions with simulators, drones, and real-world scenarios
                             </p>
                         </div>
 
                         {/* Item 3 */}
-                        <div className="flex w-[366px] flex-col items-center gap-[8px] text-center">
+                        <div className="flex w-[346px] flex-col items-center gap-[8px] text-center">
                             <img
                                 src={icon3}
                                 alt="Icon construction worker piloting drone. Designed by Freepik"
                                 className="h-[224px] w-auto rounded-xl object-cover md:h-[180px]"
                             />
                             <p className="text-left text-[18px] text-black">
-                                Safety First: Master safety protocols and best practices for responsible drone operation.
+                                <strong>Safety First:</strong> We follow Transport Canada guidelines to ensure responsible flying
+
                             </p>
                         </div>
                         {/* Row for Items 4 and 5 */}
                         <div className="lg:col-span-3 lg:flex lg:justify-center lg:gap-[48px]">
                         {/* Item 4 */}
-                        <div className="flex w-[386px] flex-col items-center gap-[8px] text-center">
+                        <div className="flex w-[346px] flex-col items-center gap-[8px] text-center">
                             <img
                                 src={icon4}
                                 alt="Equipment icon. Designed by Freepik"
                                 className="h-[224px] w-auto rounded-xl object-cover md:h-[180px]"
                             />
                             <p className="text-left text-[18px] text-black">
-                                All Equipment Provided: No gear? No problem! We supply everything you need to succeed.
+                                    <strong>All Equipment Provided:</strong> No gear? No problem! We supply everything you need to succeed.
                             </p>
                         </div>
 
                         {/* Item 5 */}
-                        <div className="flex w-[386px] flex-col items-center gap-[8px] text-center">
+                        <div className="flex w-[346px] flex-col items-center gap-[8px] text-center">
                             <img
                                 src={icon5}
                                 alt="For all ages icon. Designed by Freepik"
                                 className="h-[224px] w-auto rounded-xl object-cover md:h-[180px]"
                             />
                             <p className="text-left text-[18px] text-black">
-                                For All Ages: Our courses are tailored for learners starting from 12 years old and up.
+                                    <strong>For All Ages:</strong> Our courses are tailored for learners starting from 10 years old and up
                             </p>
                         </div>
                         </div>
@@ -149,7 +160,7 @@ export default function About() {
                                 className="h-[224px] w-auto rounded-xl object-cover md:h-[180px]"
                             />
                             <p className="text-left text-[18px] text-black">
-                                Expert Guidance: Learn from skilled instructors with years of FPV flying and teaching experience
+                                <strong>Expert Guidance:</strong> Learn from skilled instructors with years of FPV and aerial shooting experience
                             </p>
                         </div>
 
@@ -161,7 +172,7 @@ export default function About() {
                                 className="h-[224px] w-auto rounded-xl object-cover md:h-[180px]"
                             />
                             <p className="text-left text-[18px] text-black">
-                                Hands-On Training: Dive into interactive sessions with simulators, real drones, and practical flights.
+                                <strong>Hands-On Training:</strong> Dive into interactive sessions with simulators, drones, and real-world scenarios
                             </p>
                         </div>
 
@@ -173,7 +184,7 @@ export default function About() {
                                 className="h-[224px] w-auto rounded-xl object-cover md:h-[180px]"
                             />
                             <p className="text-left text-[18px] text-black">
-                                Safety First: Master safety protocols and best practices for responsible drone operation.
+                                <strong>Safety First:</strong> We follow Transport Canada guidelines to ensure responsible flying
                             </p>
                         </div>
 
@@ -185,7 +196,7 @@ export default function About() {
                                 className="h-[224px] w-auto rounded-xl object-cover md:h-[180px]"
                             />
                             <p className="text-left text-[18px] text-black">
-                                All Equipment Provided: No gear? No problem! We supply everything you need to succeed.
+                                <strong>All Equipment Provided:</strong> No gear? No problem! We supply everything you need to succeed.
                             </p>
                         </div>
 
@@ -197,7 +208,7 @@ export default function About() {
                                 className="h-[224px] w-auto rounded-xl object-cover md:h-[180px]"
                             />
                             <p className="text-left text-[18px] text-black">
-                                For All Ages: Our courses are tailored for learners starting from 12 years old and up.
+                                <strong>For All Ages:</strong> Our courses are tailored for learners starting from 10 years old and up
                             </p>
                         </div>
                     </div>
@@ -205,26 +216,25 @@ export default function About() {
                     {/* Mobile View */}
                     <div className="mt-6 text-center sm:hidden">
                         <ul className="list-disc space-y-4 pl-6 text-[18px] text-black">
-                            <li>Expert Guidance: Learn from skilled instructors with years of FPV flying and teaching experience</li>
-                            <li>Hands-On Training: Dive into interactive sessions with simulators, real drones, and practical flights.</li>
-                            <li>Safety First: Master safety protocols and best practices for responsible drone operation.</li>
-                            <li>All Equipment Provided: No gear? No problem! We supply everything you need to succeed.</li>
-                            <li>For All Ages: Our courses are tailored for learners starting from 12 years old and up.</li>
+                            <li><strong>Expert Guidance:</strong> Learn from skilled instructors with years of FPV and aerial shooting experience</li>
+                            <li><strong>Hands-On Training:</strong> Dive into interactive sessions with simulators, drones, and real-world scenarios</li>
+                            <li><strong>Safety First:</strong> We follow Transport Canada guidelines to ensure responsible flying</li>
+                            <li><strong>All Equipment Provided:</strong> No gear? No problem! We supply everything you need to succeed.</li>
+                            <li> <strong>For All Ages:</strong> Our courses are tailored for learners starting from 10 years old and up</li>
                         </ul>
                     </div>
                 </div>
 
                 {/* Join Our Community */}
                 <div  className="p-6 text-center">
-                    <h3>Join Our Community</h3>
+                    <h3>Join Our Pilot Courses</h3>
 
                     <div className="mt-6 flex flex-col items-center justify-between lg:flex-row">
 
                         {/* Text and Button Block */}
                         <div className="pl-[10px] text-center lg:text-left lg:w-1/2">
                             <p className="text-[18px] text-black">
-                                At KOOMA Drone Academy, it&apos;s not just about learning to fly - it&apos;s about joining a community of explorers who share a passion for drones and the limitless adventures they bring.
-                                Ready to Take Off? Join us today and start your journey into the exciting world of FPV drone flying. Let&apos;s make the sky yours!
+                                KOOMA Drone, it&apos;s not just about learning to fly - it&apos;s about joining a community of explorers who share a passion for drones and the limitless adventures they bring. <strong>Ready to Take Off? </strong>Join us today and start your journey into the exciting world of Drone flying. Let&apos;s make the sky yours!
                             </p>
                             <div className="mt-6 flex justify-center lg:justify-center">
                                 <button
