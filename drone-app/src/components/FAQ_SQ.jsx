@@ -9,23 +9,27 @@ export default function SQ({ question, answer }) {
     return (
         <div
             style={{
-                background: '#DCE4ED80 50%',  // Semi-transparent background
+                background: '#002A5780 50%',  // Semi-transparent background
                 boxShadow: '0px 1px 3px 0px #CADDFF4D',  // Light shadow effect
-                backdropFilter: 'blur(16px)',  // Apply blur effect behind the container
+                backdropFilter: 'blur(25px)',  // Apply blur effect behind the container
                 borderRadius: '32px',  // Rounded corners
                 padding: '40px',
                 marginBottom: '32px',  // Space between containers
-                border: '2px solid #DCE4ED80 50%',  // Border color matching the background
+                border: '2px solid #002A5780 50%',  // Border color matching the background
+                color: '#FFFDF2',
             }}
         >
             <div className="flex w-full items-center justify-between">
                 <h2
                     onClick={() => setShowAnswer(!showAnswer)}
                     style={{
+                        fontFamily: '"Libre Franklin", sans-serif', 
                         fontSize: '24px',
                         fontWeight: '500',
                         cursor: 'pointer',
                         marginBottom: '10px',
+                        lineHeight: '150%',
+                        letterSpacing: '0%',
                     }}
                 >
                     {question}

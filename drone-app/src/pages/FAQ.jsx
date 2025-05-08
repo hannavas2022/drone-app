@@ -20,7 +20,7 @@ export default function FAQ() {
     return (
         <div
             style={{
-                backgroundColor: '#3d8dc7',
+                backgroundColor: '3c8cc7',
                 padding: `40px ${getHorizontalPadding()}`,
                 
             }}
