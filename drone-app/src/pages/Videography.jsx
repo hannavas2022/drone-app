@@ -67,7 +67,7 @@ const VideoCarousel = ({ title, videos }) => {
                                         {visibleVideoIndex === index ? (
                                             <iframe
                                                 className="h-full w-full"
-                                                src={url}
+                                                src={`${url}&autoplay=1`}
                                                 title={`YouTube video ${index}`}
                                                 frameBorder="0"
                                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
