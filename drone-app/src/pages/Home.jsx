@@ -5,7 +5,7 @@ export default function Home() {
     return (
         <div className="hero-section">
             <HeroPromo />
-            <div className="my-12"></div>
+            <div className="about-section my-12"></div>
             <About />
         </div>
     );

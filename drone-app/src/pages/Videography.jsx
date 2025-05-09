@@ -5,18 +5,17 @@ import BookForm from '../components/BookForm';
 
 const videoData = {
     Sport: [
-        'https://www.youtube.com/embed/qvXS7fwcnI0?si=w7VJZ_fIU0UaDiUC',
-        'https://www.youtube.com/embed/qvXS7fwcnI0?si=w7VJZ_fIU0UaDiUC',
-        'https://www.youtube.com/embed/qvXS7fwcnI0?si=w7VJZ_fIU0UaDiUC',
-        'https://www.youtube.com/embed/qvXS7fwcnI0?si=w7VJZ_fIU0UaDiUC',
-        'https://www.youtube.com/embed/qvXS7fwcnI0?si=w7VJZ_fIU0UaDiUC',
+        'https://www.youtube.com/embed/Zt1rygi5zgM?si=BP-nxy7eIz0AS-Co',
     ],
     RealEstate: [
         'https://www.youtube.com/embed/aRe-gkMIQjY?si=W-3cI9PfXkI1egKy',
-        'https://www.youtube.com/embed/aRe-gkMIQjY?si=W-3cI9PfXkI1egKy',
-        'https://www.youtube.com/embed/aRe-gkMIQjY?si=W-3cI9PfXkI1egKy',
-        'https://www.youtube.com/embed/aRe-gkMIQjY?si=W-3cI9PfXkI1egKy',
-    ]
+    ],
+};
+
+// Extract video ID from YouTube embed URL
+const extractYouTubeId = (url) => {
+    const match = url.match(/embed\/([a-zA-Z0-9_-]{11})/);
+    return match ? match[1] : null;
 };
 
 const VideoCarousel = ({ title, videos }) => {
@@ -29,7 +28,7 @@ const VideoCarousel = ({ title, videos }) => {
             const scrollAmount = clientWidth;
             containerRef.current.scrollTo({
                 left: direction === 'left' ? scrollLeft - scrollAmount : scrollLeft + scrollAmount,
-                behavior: 'smooth'
+                behavior: 'smooth',
             });
         }
     };
@@ -42,7 +41,7 @@ const VideoCarousel = ({ title, videos }) => {
 
             <div className="relative">
                 <div className="flex flex-col items-center md:flex-row md:gap-x-6 md:px-4">
-                    {/* Scroll Left - hidden on small screens */}
+                    {/* Scroll Left */}
                     <button
                         onClick={() => scroll('left')}
                         className="hidden md:inline-block bg-[#005BBB] p-2 rounded-lg shadow hover:bg-[#FFD500] text-white hover:text-[#005BBB]"
@@ -55,35 +54,47 @@ const VideoCarousel = ({ title, videos }) => {
                         ref={containerRef}
                         className="no-scrollbar flex w-full flex-col gap-4 overflow-x-auto scroll-smooth px-4 md:flex-row md:space-x-4 md:gap-0"
                     >
-                        {videos.map((url, index) => (
-                            <div
-                                key={index}
-                                className="relative w-full overflow-hidden rounded-xl bg-[#005BBB] shadow-md md:min-w-[280px] md:max-w-[300px]"
-                            >
-                                <div className="relative aspect-video bg-black/70">
-                                    {visibleVideoIndex === index ? (
-                                        <iframe
-                                            className="h-full w-full"
-                                            src={url}
-                                            title={`YouTube video ${index}`}
-                                            frameBorder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                            allowFullScreen
-                                        ></iframe>
-                                    ) : (
-                                        <button
-                                            className="absolute inset-0 m-auto flex h-16 w-16 items-center justify-center rounded-full bg-[#005BBB] bg-opacity-50 text-white hover:bg-[#FFD500] hover:text-[#005BBB]"
-                                            onClick={() => setVisibleVideoIndex(index)}
-                                        >
-                                            <Play className="h-8 w-8" />
-                                        </button>
-                                    )}
+                        {videos.map((url, index) => {
+                            const videoId = extractYouTubeId(url);
+                            const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+
+                            return (
+                                <div
+                                    key={index}
+                                    className="relative w-full overflow-hidden rounded-xl bg-[#005BBB] shadow-md md:min-w-[280px] md:max-w-[300px]"
+                                >
+                                    <div className="relative aspect-video bg-black">
+                                        {visibleVideoIndex === index ? (
+                                            <iframe
+                                                className="h-full w-full"
+                                                src={url}
+                                                title={`YouTube video ${index}`}
+                                                frameBorder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                allowFullScreen
+                                            ></iframe>
+                                        ) : (
+                                            <>
+                                                <img
+                                                    src={thumbnailUrl}
+                                                    alt={`Thumbnail ${index}`}
+                                                    className="h-full w-full object-cover"
+                                                />
+                                                <button
+                                                    className="absolute inset-0 m-auto flex h-16 w-16 items-center justify-center rounded-full bg-[#005BBB] bg-opacity-50 text-white hover:bg-[#FFD500] hover:text-[#005BBB]"
+                                                    onClick={() => setVisibleVideoIndex(index)}
+                                                >
+                                                    <Play className="h-8 w-8" />
+                                                </button>
+                                            </>
+                                        )}
+                                    </div>
                                 </div>
-                            </div>
-                        ))}
+                            );
+                        })}
                     </div>
 
-                    {/* Scroll Right - hidden on small screens */}
+                    {/* Scroll Right */}
                     <button
                         onClick={() => scroll('right')}
                         className="hidden md:inline-block bg-[#005BBB] p-2 rounded-lg shadow hover:bg-[#FFD500] text-white hover:text-[#005BBB]"
@@ -98,7 +109,7 @@ const VideoCarousel = ({ title, videos }) => {
 
 VideoCarousel.propTypes = {
     title: PropTypes.string.isRequired,
-    videos: PropTypes.arrayOf(PropTypes.string).isRequired
+    videos: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
 export default function YouTubeSlider() {
