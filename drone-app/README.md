@@ -1,38 +1,41 @@
-# Drone App Documentation
+Drone App Documentation
+Overview
+Drone App is a web-based application built using React, Tailwind CSS, and Vite. It provides an interface for KOOMA Drone's pilot training services, including course offerings, FAQs, and technical support resources.
 
-## Overview
-Drone App is a web-based application built using **React, Tailwind CSS, and Vite**. It provides an interface for pilot drone school services, including courses, FAQs, and technical support.
+Installation & Setup
+Prerequisites
+Make sure the following are installed:
 
-## Installation & Setup
+Node.js (v16 or later)
 
-### Prerequisites
-Ensure you have the following installed:
-- **Node.js** (v16 or later)
-- **npm** or **yarn**
+npm or yarn
 
-### Clone the Repository
-```sh
+Clone the Repository
+sh
+Copy
+Edit
 git clone <repository-url>
 cd drone-app
-```
-
-### Install Dependencies
-```sh
+Install Dependencies
+sh
+Copy
+Edit
 npm install
 # or
 yarn install
-```
-
-### Start the Development Server
-```sh
+Start the Development Server
+sh
+Copy
+Edit
 npm run dev
 # or
 yarn dev
-```
-This will start the app at **http://localhost:5173/** by default.
+Visit the app at http://localhost:5173/ by default.
 
-## Folder Structure
-```
+Folder Structure
+bash
+Copy
+Edit
 /drone-app
 |-- /src
 |   |-- /components        # Reusable UI components
@@ -44,29 +47,41 @@ This will start the app at **http://localhost:5173/** by default.
 |-- package.json           # Project dependencies and scripts
 |-- tailwind.config.js     # Tailwind CSS configuration
 |-- vite.config.js         # Vite configuration
-```
+Available Scripts
+npm run dev – Start the development server
 
-## Available Scripts
-- `npm run dev` – Start the development server
-- `npm run build` – Build the project for production
-- `npm run preview` – Preview the built application
+npm run build – Build the project for production
 
-## Key Components & Pages
-- **Navbar.jsx** – Main navigation bar
-- **Footer.jsx** – Footer section
-- **Home.jsx** – Landing page
-- **About.jsx** – About us page
-- **Courses.jsx** – Drone-related courses
-- **FAQ.jsx** – Frequently Asked Questions section
-- **TechSupport.jsx** – Technical support page
-- **ImageSlider.jsx** – Image slider for showcasing content
+npm run preview – Preview the production build locally
 
-## Deployment Instructions
-1. Build the project:
-   ```sh
-   npm run build
-   ```
-2. Deploy the **dist/** folder to a static hosting provider like **Netlify, Vercel, or GitHub Pages**.
+Key Components & Pages
+Navbar.jsx – Main navigation
 
-## License
-This project is licensed under **[your preferred license]**.
+Footer.jsx – Footer section
+
+Home.jsx – Landing page
+
+About.jsx – About us
+
+Courses.jsx – Drone pilot training courses
+
+FAQ.jsx – Frequently Asked Questions
+
+TechSupport.jsx – Technical support page
+
+ImageSlider.jsx – Image carousel component
+
+Deployment Instructions
+Build the project:
+
+sh
+Copy
+Edit
+npm run build
+Deploy the dist/ folder to a static host like Netlify, Vercel, or GitHub Pages.
+
+License
+This project is licensed under the MIT License.
+
+© 2025 KOOMA Drone
+See the LICENSE file for full license text.

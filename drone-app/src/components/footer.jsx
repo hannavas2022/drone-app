@@ -16,9 +16,27 @@ export default function Footer() {
                     Join us on social media and stay tuned:
                 </p>
                 <div className="flex flex-wrap justify-center gap-[16px] p-2 sm:gap-[20px] md:gap-[24px]">
-                    {[facebook, instagram, youtube, email, whatsapp, threads, tiktok].map((icon, i) => (
-                        <img key={i} src={icon} alt="social" className="h-[24px] w-[24px]" />
-                    ))}
+                    <a href="https://www.facebook.com/profile.php?id=61569971140339" target="_blank" rel="noopener noreferrer">
+                        <img src={facebook} alt="Facebook" className="h-[24px] w-[24px]" />
+                    </a>
+                    <a href="https://www.instagram.com/koomadrone" target="_blank" rel="noopener noreferrer">
+                        <img src={instagram} alt="Instagram" className="h-[24px] w-[24px]" />
+                    </a>
+                    <a href="https://www.youtube.com/@Koomadrone" target="_blank" rel="noopener noreferrer">
+                        <img src={youtube} alt="YouTube" className="h-[24px] w-[24px]" />
+                    </a>
+                    <a href="mailto:koomadrone@gmail.com">
+                        <img src={email} alt="Email" className="h-[24px] w-[24px]" />
+                    </a>
+                    <a href="https://wa.me/your-phone-number" target="_blank" rel="noopener noreferrer">
+                        <img src={whatsapp} alt="WhatsApp" className="h-[24px] w-[24px]" />
+                    </a>
+                    <a href="https://www.threads.net/@koomadrone" target="_blank" rel="noopener noreferrer">
+                        <img src={threads} alt="Threads" className="h-[24px] w-[24px]" />
+                    </a>
+                    <a href="https://www.tiktok.com/@koomadrone.ca" target="_blank" rel="noopener noreferrer">
+                        <img src={tiktok} alt="TikTok" className="h-[24px] w-[24px]" />
+                    </a>cd
                 </div>
             </div>
 
