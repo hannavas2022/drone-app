@@ -39,7 +39,6 @@ yarn dev
 Visit the app at [http://localhost:5173/](http://localhost:5173/) by default.
 
 ## 📁 Folder Structure
-\```
 
 drone-app/
 
@@ -72,7 +71,7 @@ drone-app/
 ├── .gitignore # Git ignored files
 
 └── README.md # This file
-\```
+
 
 ## 📜 Available Scripts
 - `npm run dev` – Start the development server
