@@ -1,37 +1,34 @@
-﻿🛸 Drone App Documentation
-📋 Overview
+#﻿🛸 Drone App Documentation
+##📋 Overview
 Drone App is a web-based application developed for KOOMA Drone using React, Tailwind CSS, and Vite. It serves as a portal for drone pilot training services, including course details, FAQs, and support resources.
 
 
 
-⚙️ Installation & Setup
-✅ Prerequisites
+##⚙️ Installation & Setup
+###✅ Prerequisites
 Ensure you have the following installed:
-
 Node.js (v16 or later)
-
 npm or yarn
 
-📥 Clone the Repository
-
+###📥 Clone the Repository
 git clone <repository-url>
 cd drone-app
 
-📦 Install Dependencies
+##📦 Install Dependencies
 
 npm install
-# or
+### or
 yarn install
 
-🚀 Start the Development Server
+##🚀 Start the Development Server
 
 npm run dev
-# or
+### or
 yarn dev
 
 Visit the app at http://localhost:5173/ by default.
 
-📁 Folder Structure
+##📁 Folder Structure
 
 drone-app/
 ├── public/                 # Static files like favicon, manifest, etc.
@@ -51,21 +48,21 @@ drone-app/
 └── README.md               # This file
 
 
-📜 Available Scripts
+##📜 Available Scripts
 
 npm run dev – Start the development server
 npm run build – Build the project for production
 npm run preview – Preview the production build locally
 
-🧩 Key Pages & Components
+##🧩 Key Pages & Components
 
-Pages (/src/pages)
+###Pages (/src/pages)
 Home.jsx – Landing page with introduction and features
 Courses.jsx – Information about available drone courses
 FAQ.jsx – Frequently asked questions
 Videography.jsx – Details about drone videography services
 
-Components (/src/components)
+###Components (/src/components)
 About.jsx – About the school or company
 BookForm.jsx – Booking or registration form
 Construction.jsx – Placeholder/under construction message
@@ -76,14 +73,14 @@ Footer.jsx – Footer with contact details and links
 RoutesLayout.jsx – Layout for routing
 
 
-🚢 Deployment Instructions
+##🚢 Deployment Instructions
 
 1.Build the project:
 npm run build
 
 2. Deploy the dist/ folder to a static host.
 
-📄 License
+##📄 License
 
 This project is licensed under the MIT License.
 © 2025 KOOMA Drone
