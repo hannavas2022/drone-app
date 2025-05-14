@@ -40,22 +40,38 @@ Visit the app at [http://localhost:5173/](http://localhost:5173/) by default.
 
 ## 📁 Folder Structure
 \```
+
 drone-app/
-├── public/                 # Static files like favicon, manifest, etc.
-├── src/                    # Source files
-│   ├── components/         # Reusable UI components
-│   ├── pages/              # Page-level components
-│   ├── App.jsx             # Main App component
-│   └── main.jsx            # App entry point
-├── .vscode/                # VSCode project settings
-├── dist/                   # Build output
-├── node_modules/           # Installed dependencies
-├── package.json            # Project metadata and scripts
-├── tailwind.config.js      # Tailwind configuration
-├── vite.config.js          # Vite configuration
-├── postcss.config.js       # PostCSS settings
-├── .gitignore              # Git ignored files
-└── README.md               # This file
+
+├── public/ # Static files like favicon, manifest, etc.
+
+├── src/ # Source files
+
+│ ├── components/ # Reusable UI components
+
+│ ├── pages/ # Page-level components
+
+│ ├── App.jsx # Main App component
+
+│ └── main.jsx # App entry point
+
+├── .vscode/ # VSCode project settings
+
+├── dist/ # Build output
+
+├── node\_modules/ # Installed dependencies
+
+├── package.json # Project metadata and scripts
+
+├── tailwind.config.js # Tailwind configuration
+
+├── vite.config.js # Vite configuration
+
+├── postcss.config.js # PostCSS settings
+
+├── .gitignore # Git ignored files
+
+└── README.md # This file
 \```
 
 ## 📜 Available Scripts
