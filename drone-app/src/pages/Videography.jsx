@@ -6,6 +6,7 @@ import BookForm from '../components/BookForm';
 const videoData = {
     Sport: [
         'https://www.youtube.com/embed/Zt1rygi5zgM?si=BP-nxy7eIz0AS-Co',
+        'https://www.youtube.com/embed/lj2eKl1umeg?si=OsXILFTz9ru0cRSk',
     ],
     RealEstate: [
         'https://www.youtube.com/embed/aRe-gkMIQjY?si=W-3cI9PfXkI1egKy',
@@ -69,7 +70,7 @@ const VideoCarousel = ({ title, videos }) => {
                                                 className="h-full w-full"
                                                 src={`${url}&autoplay=1`}
                                                 title={`YouTube video ${index}`}
-                                                frameBorder="0"
+                                                style={{ border: "none" }}
                                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                                 allowFullScreen
                                             ></iframe>

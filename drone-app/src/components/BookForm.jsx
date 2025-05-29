@@ -1,4 +1,6 @@
 ﻿import { useState } from 'react';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 
 const BookForm = () => {
     const [formData, setFormData] = useState({
@@ -62,6 +64,7 @@ const BookForm = () => {
                 onSubmit={handleSubmit}
                 className="w-full max-w-4xl rounded-[32px] bg-[#002A5780] p-8 shadow-md"
             >
+
                 <h2 className="mb-6 text-center text-2xl font-semibold text-white">
                     Book your drone shooting today
                 </h2>
@@ -108,19 +111,20 @@ const BookForm = () => {
                     </div>
 
                     {/* Date */}
-                    <div className="relative">
-                        <input
-                            type="date"
-                            name="date"
-                            lang="en"
-                            value={formData.date}
-                            onChange={handleChange}
-                            required
-                            className="w-full rounded-md border-2 border-white bg-[#002A5720] p-3 text-white placeholder-white transition-all duration-200 hover:border-[#005BBB] focus:border-[#FFD500] focus:outline-none [&::-webkit-calendar-picker-indicator]:invert [&::-webkit-calendar-picker-indicator]:brightness-200"
-                        />
-                        {errors.date && <p className="mt-1 text-sm text-red-500">{errors.date}</p>}
-                    </div>
-
+                    <DatePicker
+                        selected={formData.date ? new Date(formData.date) : null}
+                        onChange={(date) => {
+                            setFormData((prev) => ({
+                                ...prev,
+                                date: date ? date.toISOString().split('T')[0] : ''
+                            }));
+                        }}
+                        dateFormat="dd.MM.yyyy"
+                        placeholderText="Date"
+                        className="w-full rounded-md border-2 border-white bg-[#002A5720] p-3 text-white placeholder-white transition-all duration-200 hover:border-[#005BBB] focus:border-[#FFD500] focus:outline-none"
+                    />
+                    {errors.date && <p className="mt-1 text-sm text-red-500">{errors.date}</p>}
+                 
                     {/* Message - full width on all screens */}
                     <div className="md:col-span-2">
                         <textarea
@@ -129,7 +133,6 @@ const BookForm = () => {
                             value={formData.message}
                             onChange={handleChange}
                             placeholder="Details (optional)"
-                            required
                             className="w-full rounded-md border-2 border-white bg-[#002A5720] p-3 text-white placeholder-white transition-all duration-200 hover:border-[#005BBB] focus:border-[#FFD500] focus:outline-none"
                         ></textarea>
                     </div>

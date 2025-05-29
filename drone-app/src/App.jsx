@@ -6,6 +6,7 @@ import FAQ from './pages/FAQ';
 import Videography from './pages/Videography';
 import Footer from './components/Footer';
 import RoutesLayout from './components/RoutesLayout'
+import ChatbotWidget from './components/ChatbotWidget'
 import './index.css';
 import { Route, Routes } from 'react-router-dom';
 
@@ -22,6 +23,7 @@ function App() {
                     <Route path="/videography" element={<Videography />} />
                 </Routes>
             </RoutesLayout>
+            <ChatbotWidget />
             <Footer />
         </>
     );
