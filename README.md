@@ -11,7 +11,7 @@ A full-stack web platform for KOOMA Drone, offering drone training, videography 
 ## ✨ Overview
 
 - Responsive frontend with **React + Vite + Tailwind CSS**
-- Chatbot powered by **Cohere LLM (command-a-03-2025)**
+- Chatbot powered by **Cohere LLM (command-r-plus)**
 - Seamless frontend-backend integration via REST API
 - FAQs dynamically answered using structured data
 
