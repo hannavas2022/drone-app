@@ -1,7 +1,7 @@
-# 🛸 Drone App Documentation
+# 🛸 KOOMA Drone App Documentation
 
 ## 📋 Overview
-Drone App is a web-based application developed for KOOMA Drone using React, Tailwind CSS, and Vite. It serves as a portal for drone pilot training services, including course details, FAQs, and support resources.
+KOOMA Drone App is a web-based application developed for KOOMA Drone using React, Tailwind CSS, and Vite. It serves as a portal for drone pilot training services, including course details, FAQs, and support resources.
 
 ## ⚙️ Installation & Setup
 
