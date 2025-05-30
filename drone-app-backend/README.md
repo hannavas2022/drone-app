@@ -38,14 +38,13 @@ drone-app-backend/
 
 ### 📥 Install Dependencies
 
-```bash
 npm install
 
-## 🧪 Run Locally with Vercel
+### 🧪 Run Locally with Vercel
 
 vercel dev
 
-## 🌍 Endpoint
+### 🌍 Endpoint
 
 POST /api/chat
 
@@ -59,14 +58,14 @@ Response:
   "reply": "You can register via the BookForm on our homepage or contact support."
 }
 
-## 🔐 Environment Variables
+### 🔐 Environment Variables
 
 CO_API_KEY=your_cohere_api_key
 
-## 🚢 Deployment
+### 🚢 Deployment
 
 vercel --prod
 
-## 📄 License
+### 📄 License
 This project is licensed under the MIT License.  
 © 2025 KOOMA Drone
