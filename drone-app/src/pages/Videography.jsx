@@ -5,11 +5,33 @@ import BookForm from '../components/BookForm';
 
 const videoData = {
     Sport: [
-        'https://www.youtube.com/embed/Zt1rygi5zgM?si=BP-nxy7eIz0AS-Co',
-        'https://www.youtube.com/embed/lj2eKl1umeg?si=OsXILFTz9ru0cRSk',
+        {
+            url: 'https://www.youtube.com/embed/ThppsM0xjXY?si=G84sUH21jAGGnKT6',
+            title: 'Drone Base Game'
+        },
+        {
+            url: 'https://www.youtube.com/embed/clX7_eAoJK4?si=NClYQfDVDno70ucV',
+            title: 'Fit-boots outdoor training'
+        },
+        {
+            url: 'https://www.youtube.com/embed/Zt1rygi5zgM?si=BP-nxy7eIz0AS-Co',
+            title: 'Basketball drone videography'
+        },
+        {
+            url: 'https://www.youtube.com/embed/lj2eKl1umeg?si=OsXILFTz9ru0cRSk',
+            title: 'Youth Basketball drills'
+        },
     ],
     RealEstate: [
-        'https://www.youtube.com/embed/aRe-gkMIQjY?si=W-3cI9PfXkI1egKy',
+        {
+            url: 'https://www.youtube.com/embed/DPnvnhFg2lY?si=0noYcgPX984yJ7Xa',
+            title: 'Camp Morton Cabin Tour 2025'
+        },
+        {
+            url: 'https://www.youtube.com/embed/aRe-gkMIQjY?si=W-3cI9PfXkI1egKy',
+            title: 'Back & Neck Rehab Centre Tour'
+        },
+        
     ],
 };
 
@@ -55,7 +77,7 @@ const VideoCarousel = ({ title, videos }) => {
                         ref={containerRef}
                         className="no-scrollbar flex w-full flex-col gap-4 overflow-x-auto scroll-smooth px-4 md:flex-row md:space-x-4 md:gap-0"
                     >
-                        {videos.map((url, index) => {
+                        {videos.map(({ url, title: videoTitle }, index) => {
                             const videoId = extractYouTubeId(url);
                             const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
 
@@ -69,7 +91,7 @@ const VideoCarousel = ({ title, videos }) => {
                                             <iframe
                                                 className="h-full w-full"
                                                 src={`${url}&autoplay=1`}
-                                                title={`YouTube video ${index}`}
+                                                title={videoTitle}
                                                 style={{ border: "none" }}
                                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                                 allowFullScreen
